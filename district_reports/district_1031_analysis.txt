@@ -1,0 +1,46 @@
+======================================================================
+AMSTERDAM DISTRICT 1031 - MARKET ANALYSIS REPORT
+======================================================================
+
+OVERVIEW
+----------------------------------------------------------------------
+Total Restaurants: 62
+Average Rating: 4.46/5.0
+Total Reviews: 89,120
+Cuisine Diversity: 31 cuisines
+
+AI-GENERATED MARKET ANALYSIS
+----------------------------------------------------------------------
+District 1031 Market Analysis
+
+**Market Overview:** This district contains 62 restaurants with an average rating of 4.46/5.0. The market shows high saturation, indicating intense competition. The predominant market positioning is Budget Casual.
+
+**Competitive Landscape:** Highly competitive environment requiring strong differentiation. Notable gap in Pizza restaurant cuisine.
+
+**Business Opportunities:** Consider introducing underserved cuisines. 
+
+**Strategic Recommendations:** Focus on quality and unique positioning to stand out in this market.
+
+DETAILED METRICS
+----------------------------------------------------------------------
+
+Market Saturation: High
+Competitive Intensity: Low
+Entry Barriers: High
+
+Market Position: N/A
+Quality/Price Ratio: N/A
+
+Market Potential Score: 0.0/10
+Quality Gap: 0.04
+
+Underserved Cuisines:
+  - Pizza restaurant (144 citywide)
+  - Cannabis store (115 citywide)
+  - Bakery (111 citywide)
+  - Indian restaurant (82 citywide)
+  - Pub (81 citywide)
+
+======================================================================
+Report generated: 2025-12-02T23:35:53.626978
+======================================================================

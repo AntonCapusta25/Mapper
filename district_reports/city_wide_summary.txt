@@ -1,0 +1,22 @@
+======================================================================
+AMSTERDAM RESTAURANT MARKET - CITY-WIDE SUMMARY
+======================================================================
+
+Total Districts Analyzed: 83
+Analysis Date: 2025-12-02T23:30:44.741523
+LLM Used: Yes
+
+TOP 10 HIGHEST-POTENTIAL DISTRICTS
+----------------------------------------------------------------------
+1. District 1026: Potential 6.2/10 (3 restaurants, 4.47 avg rating)
+2. District 1042: Potential 6.0/10 (3 restaurants, 4.27 avg rating)
+3. District 1027: Potential 5.8/10 (3 restaurants, 4.8 avg rating)
+4. District 1060: Potential 5.8/10 (3 restaurants, 4.0 avg rating)
+5. District 1191: Potential 5.7/10 (5 restaurants, 4.4 avg rating)
+6. District 1184: Potential 5.4/10 (5 restaurants, 4.46 avg rating)
+7. District 1024: Potential 5.2/10 (6 restaurants, 4.13 avg rating)
+8. District 1108: Potential 5.1/10 (6 restaurants, 4.3 avg rating)
+9. District 1046: Potential 5.0/10 (8 restaurants, 4.16 avg rating)
+10. District 1086: Potential 4.8/10 (6 restaurants, 4.15 avg rating)
+
+======================================================================

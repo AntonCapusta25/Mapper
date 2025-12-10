@@ -1,0 +1,30 @@
+{
+  "search_queries": [
+    "restaurants in Amsterdam Nieuwendam-Noord",
+    "restaurants in Amsterdam Overhoeks",
+    "restaurants near Marineterrein Amsterdam",
+    "restaurants near Amstelstation Park",
+    "restaurants in Amsterdam Burgwallen-Nieuwe Zijde",
+    "restaurants in Amsterdam Burgwallen-Oude Zijde",
+    "restaurants in Amsterdam Oostzanerwerf",
+    "restaurants in Amsterdam Buiksloot",
+    "coffee near Beukenplein Amsterdam",
+    "brunch near Olympic Stadium Amsterdam",
+    "restaurants near Sloterpark Amsterdam",
+    "restaurants near Diemerpark Amsterdam",
+    "restaurants near Noordhollandsch Kanaal Amsterdam",
+    "bars near Java Eiland Amsterdam",
+    "lunch near Spiegelkwartier Amsterdam",
+    "restaurants near Muziekgebouw aan 't IJ Amsterdam",
+    "restaurants in Amsterdam Holendrecht-West",
+    "restaurants in Amsterdam Haspelslaan business area",
+    "restaurants in Amsterdam Overamstel",
+    "restaurants near Rembrandt Tower Amsterdam"
+  ],
+  "max_results_per_query": 300,
+  "scroll_pause_time": 2,
+  "request_delay": 1.5,
+  "output_file": "restaurants_data.json",
+  "headless": false,
+  "max_scroll_attempts": 30
+}
