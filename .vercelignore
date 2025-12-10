@@ -1,0 +1,32 @@
+# Ignore Python files - this is a static site only
+*.py
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+
+# Ignore scraper and analytics files
+scraper*.py
+analytics.py
+district_analytics.py
+llm_analyzer.py
+city_summary.py
+batch_analyzer.py
+check_overlap.py
+analyze_*.py
+fetch_geojson.py
+prepare_static_deploy.py
+
+# Ignore data processing
+district_reports/
+collected_urls*.json
+district_analyses_cache.json
+pricing_analysis.csv
+scraper_log.txt
+
+# Keep only static assets and data
+!index.html
+!restaurants_data.json
+!farms_data.json
+!static/
