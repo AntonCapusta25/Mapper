@@ -1,19 +1,6 @@
+```json
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "server.py",
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "server.py"
-        }
-    ]
+    "public": true
 }
+```

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam Restaurants & Farms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <h1>Amsterdam Restaurants & Farms Map</h1>
+    <p>Interactive map showing restaurants and farms data</p>
+
+    <div id="map" style="height: 600px; margin: 20px 0;"></div>
+
+    <div class="stats">
+        <h2>Statistics</h2>
+        <div id="stats-content">Loading...</div>
+    </div>
+
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([52.3676, 4.9041], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Load and display data
+        Promise.all([
+            fetch('restaurants_data.json').then(r => r.json()),
+            fetch('farms_data.json').then(r => r.json())
+        ]).then(([restaurants, farms]) => {
+            document.getElementById('stats-content').innerHTML = `
+                <p><strong>Restaurants:</strong> ${restaurants.length}</p>
+                <p><strong>Farms:</strong> ${farms.length}</p>
+            `;
+
+            // Add markers for restaurants (blue)
+            restaurants.forEach(r => {
+                if (r.latitude && r.longitude) {
+                    L.circleMarker([r.latitude, r.longitude], {
+                        radius: 5,
+                        fillColor: '#667eea',
+                        color: '#000',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    }).bindPopup(`<b>${r.name}</b><br>${r.rating || 'N/A'}⭐`).addTo(map);
+                }
+            });
+
+            // Add markers for farms (green)
+            farms.forEach(f => {
+                if (f.latitude && f.longitude) {
+                    L.circleMarker([f.latitude, f.longitude], {
+                        radius: 5,
+                        fillColor: '#41ab5d',
+                        color: '#000',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    }).bindPopup(`<b>${f.name}</b><br>${f.rating || 'N/A'}⭐`).addTo(map);
+                }
+            });
+        }).catch(err => {
+            document.getElementById('stats-content').innerHTML = 'Error loading data';
+            console.error(err);
+        });
+    </script>
+</body>
+
+</html>
