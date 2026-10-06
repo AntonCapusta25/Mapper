@@ -9,6 +9,8 @@ let stats = {};
 let map;
 let geoJsonLayer;
 let districtRecommendations = {};
+let chefsData = [];
+let chefLayerGroup;
 
 // PC4 to Neighborhood Name Mapping
 const pc4ToNeighborhood = {
@@ -71,14 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize Map
 async function initMap() {
     map = L.map('map').setView([52.3676, 4.9041], 12);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    // Switch to Carto Positron (light_all) for a cleaner, brighter base map
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
         maxZoom: 19
     }).addTo(map);
 
+    chefLayerGroup = L.layerGroup().addTo(map);
+
     await loadRecommendations();
     await loadMapData();
+    await loadChefsData();
 }
 
 async function loadRecommendations() {
@@ -140,14 +146,26 @@ function refreshMapData() {
 }
 
 function styleFeature(feature) {
+    const count = feature.properties.count || 0;
     return {
-        fillColor: getColor(feature.properties.count),
-        weight: 2, opacity: 1, color: 'white', dashArray: '3', fillOpacity: 0.7
+        fillColor: getColor(count),
+        weight: 1.5,
+        opacity: count > 0 ? 1 : 0.3,
+        color: '#ffffff',
+        dashArray: '',
+        fillOpacity: count > 0 ? 0.85 : 0.05,
+        className: count > 0 ? 'amsterdam-active-district' : 'amsterdam-empty-district'
     };
 }
 
 function getColor(d) {
-    return d > 50 ? '#800026' : d > 20 ? '#BD0026' : d > 10 ? '#E31A1C' : d > 5 ? '#FC4E2A' : d > 2 ? '#FD8D3C' : d > 0 ? '#FEB24C' : '#FFEDA0';
+    return d > 50 ? '#9a3412' : // Deep burnt orange
+           d > 20 ? '#c2410c' : // Rust orange
+           d > 10 ? '#ea580c' : // Warm orange
+           d > 5  ? '#f97316' : // Soft orange
+           d > 2  ? '#fb923c' : // Creamy orange
+           d > 0  ? '#fdba74' : // Peach orange
+                    '#fff7ed';  // Warm white tint for empty
 }
 
 function onEachFeature(feature, layer) {
@@ -156,7 +174,7 @@ function onEachFeature(feature, layer) {
 
 function highlightFeature(e) {
     const layer = e.target;
-    layer.setStyle({ weight: 5, color: '#ffffff', dashArray: '', fillOpacity: 0.7 });
+    layer.setStyle({ weight: 3, color: '#fff7ed', dashArray: '', fillOpacity: 0.85 });
     layer.bringToFront();
 
     const props = layer.feature.properties;
@@ -194,6 +212,21 @@ function setupEventListeners() {
     exportDataBtn.addEventListener('click', exportToCSV);
     document.getElementById('reloadData').addEventListener('click', reloadData);
     searchInput.addEventListener('input', debounce(applyFilters, 300));
+
+    const showChefsToggle = document.getElementById('showChefsToggle');
+    if (showChefsToggle) {
+        showChefsToggle.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                if (map && !map.hasLayer(chefLayerGroup)) {
+                    chefLayerGroup.addTo(map);
+                }
+            } else {
+                if (map && map.hasLayer(chefLayerGroup)) {
+                    map.removeLayer(chefLayerGroup);
+                }
+            }
+        });
+    }
 }
 
 async function reloadData() {
@@ -360,3 +393,109 @@ function showEmpty() { emptyState.style.display = 'block'; restaurantsGrid.style
 function formatNumber(num) { if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M'; if (num >= 1000) return (num / 1000).toFixed(1) + 'K'; return num.toString(); }
 function escapeHtml(text) { const div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
 function debounce(func, wait) { let timeout; return function(...args) { clearTimeout(timeout); timeout = setTimeout(() => func(...args), wait); }; }
+
+async function loadChefsData() {
+    try {
+        const response = await fetch('./chefs_data.json');
+        if (!response.ok) return;
+        chefsData = await response.json();
+        renderChefMarkers();
+    } catch (error) {
+        console.error('Error loading chefs data:', error);
+    }
+}
+
+function getChefEmoji(name) {
+    const n = name.toLowerCase();
+    
+    // Country flags for specific cuisines / nationalities
+    if (n.includes('indian') || n.includes('bombay') || n.includes('swetima') || n.includes('patel') || n.includes('sham') || n.includes('spices of india')) return '🇮🇳';
+    if (n.includes('italian') || n.includes('vincenzo') || n.includes('renato') || n.includes('bottega') || n.includes('cucina') || n.includes('dante') || n.includes('aleksandr')) return '🇮🇹';
+    if (n.includes('korean')) return '🇰🇷';
+    if (n.includes('moroccan') || n.includes('marokkaanse')) return '🇲🇦';
+    if (n.includes('ghana')) return '🇬🇭';
+    if (n.includes('perzie') || n.includes('persia') || n.includes('arefe')) return '🇮🇷';
+    if (n.includes('sushi') || n.includes('japanese')) return '🇯🇵';
+    if (n.includes('sierra leone')) return '🇸🇱';
+    if (n.includes('turkish') || n.includes('turkuaz')) return '🇹🇷';
+    if (n.includes('vietnamese') || n.includes('xóm')) return '🇻🇳';
+    if (n.includes('bangla') || n.includes('bangaliana')) return '🇧🇩';
+    if (n.includes('iraqi') || n.includes('iraq')) return '🇮🇶';
+    if (n.includes('kosh') || n.includes('egypt')) return '🇪🇬';
+    if (n.includes('beirut') || n.includes('lebanese') || n.includes('lebanon')) return '🇱🇧';
+    if (n.includes('dominicana')) return '🇩🇴';
+    if (n.includes('alakondre') || n.includes('suriname')) return '🇸🇷';
+    if (n.includes('handi') || n.includes('ammi') || n.includes('pakistani')) return '🇵🇰';
+    if (n.includes('yuhan') || n.includes('indonesian')) return '🇮🇩';
+    if (n.includes('caribbean')) return '🇯🇲';
+    if (n.includes('thai')) return '🇹🇭';
+    
+    // Specific food categories
+    if (n.includes('healthy') || n.includes('nourish') || n.includes('herbain')) return '🥗';
+    if (n.includes('desi') || n.includes('masala') || n.includes('biryani') || n.includes('deshi') || n.includes('curry')) return '🍛';
+    if (n.includes('pizza') || n.includes('forno') || n.includes('pasta') || n.includes('piadina') || n.includes('foldo') || n.includes('tiramisu')) return '🍕';
+    if (n.includes('bakes') || n.includes('bakery') || n.includes('cake') || n.includes('cakery') || n.includes('sweet') || n.includes('swirl') || n.includes('pastry') || n.includes('cookie') || n.includes('treats') || n.includes('desserts') || n.includes('pastry')) return '🍰';
+    if (n.includes('tacos') || n.includes('mexican') || n.includes('quesadilla') || n.includes('cali') || n.includes('agave') || n.includes('comal')) return '🌮';
+    if (n.includes('asian') || n.includes('soup') || n.includes('ramen') || n.includes('noodle')) return '🥢';
+    if (n.includes('middle eastern') || n.includes('almatbakh')) return '🥙';
+    if (n.includes('african') || n.includes('adinkra')) return '🍲';
+    
+    return '👨‍🍳';
+}
+
+function renderChefMarkers() {
+    if (!chefLayerGroup) return;
+    chefLayerGroup.clearLayers();
+    
+    chefsData.forEach(chef => {
+        if (!chef.lat || !chef.lng) return;
+        
+        // Filter chefs to display those in/near Amsterdam
+        const isAmsterdam = (chef.city || '').toLowerCase().includes('amsterdam') || 
+                            (chef.address || '').toLowerCase().includes('amsterdam') ||
+                            (chef.postal_code && /^(10|110)/.test(chef.postal_code.trim().replace(/\s+/g, '')));
+        
+        if (!isAmsterdam) return;
+        
+        const emoji = getChefEmoji(chef.name);
+        const chefIcon = L.divIcon({
+            className: 'chef-marker-container',
+            html: `
+                <div class="chef-marker-pulse"></div>
+                <div class="chef-avatar-marker">${emoji}</div>
+            `,
+            iconSize: [46, 46],
+            iconAnchor: [23, 23],
+            popupAnchor: [0, -23]
+        });
+        
+        const popupContent = `
+            <div class="chef-tooltip-card">
+                <div class="chef-tooltip-header">
+                    <span class="chef-tooltip-badge">${emoji} Chef Partner</span>
+                    <h3>${escapeHtml(chef.name)}</h3>
+                </div>
+                <div class="chef-tooltip-body">
+                    <div class="chef-tooltip-row">
+                        <span class="chef-tooltip-icon">📍</span>
+                        <span>${escapeHtml(chef.address || 'Amsterdam, Netherlands')}</span>
+                    </div>
+                    ${chef.phone ? `
+                    <div class="chef-tooltip-row">
+                        <span class="chef-tooltip-icon">📞</span>
+                        <span>${escapeHtml(chef.phone)}</span>
+                    </div>` : ''}
+                    ${chef.email ? `
+                    <div class="chef-tooltip-row">
+                        <span class="chef-tooltip-icon">✉️</span>
+                        <span>${escapeHtml(chef.email)}</span>
+                    </div>` : ''}
+                </div>
+            </div>
+        `;
+        
+        const marker = L.marker([chef.lat, chef.lng], { icon: chefIcon });
+        marker.bindPopup(popupContent, { className: 'chef-popup' });
+        chefLayerGroup.addLayer(marker);
+    });
+}

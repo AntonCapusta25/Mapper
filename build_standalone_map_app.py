@@ -329,6 +329,10 @@ template = """<!DOCTYPE html>
                 <h1>Enschede Restaurants & Food Spots</h1>
                 <p>Interactive spatial map & cuisine analytics</p>
             </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; background: #f5f5f7; padding: 4px; border-radius: 999px; border: 1px solid var(--border-color);">
+                <a href="index.html" style="padding: 0.4rem 0.9rem; border-radius: 999px; font-weight: 600; font-size: 0.82rem; text-decoration: none; color: var(--text-main);">🏛️ Amsterdam</a>
+                <a href="enschede.html" style="padding: 0.4rem 0.9rem; border-radius: 999px; font-weight: 700; font-size: 0.82rem; text-decoration: none; background: var(--primary); color: #ffffff; box-shadow: 0 2px 6px rgba(255,59,48,0.3);">📍 Enschede</a>
+            </div>
             <div class="stats-bar">
                 <div class="stat-item">
                     <div class="stat-val" id="stat-count">0</div>
@@ -548,12 +552,22 @@ template = """<!DOCTYPE html>
 
 html_content = template.replace("__JSON_DATA__", json_data_str)
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    f.write(html_content)
+output_files = [
+    "enschede_map.html",
+    "enschede.html",
+    "public/enschede.html",
+    "public/enschede_map.html",
+    "deploy/enschede.html",
+    "deploy/enschede_map.html",
+    "webapp/enschede.html",
+    "webapp/enschede_map.html"
+]
 
-os.makedirs("webapp", exist_ok=True)
-with open(WEBAPP_FILE, "w", encoding="utf-8") as f:
-    f.write(html_content)
+for filepath in output_files:
+    folder = os.path.dirname(filepath)
+    if folder:
+        os.makedirs(folder, exist_ok=True)
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Generated: {filepath} ({round(os.path.getsize(filepath)/1024, 1)} KB)")
 
-print(f"Generated standalone map app: {OUTPUT_FILE} ({round(os.path.getsize(OUTPUT_FILE)/1024, 1)} KB)")
-print(f"Updated webapp copy: {WEBAPP_FILE}")

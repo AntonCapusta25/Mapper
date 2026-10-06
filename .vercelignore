@@ -25,8 +25,15 @@ district_analyses_cache.json
 pricing_analysis.csv
 scraper_log.txt
 
-# Keep only static assets and data
+# Keep static assets and deployment files
 !index.html
+!enschede.html
+!enschede_map.html
 !restaurants_data.json
 !farms_data.json
 !static/
+!public/
+!deploy/
+!webapp/
+!data/
+

@@ -1,0 +1,32 @@
+# Use official Playwright Python image for production stability
+# Updated to latest compatible version to match requirements.txt
+FROM mcr.microsoft.com/playwright/python:v1.49.1-jammy
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /app
+
+# Install Node.js and clasp (required for Google Apps Script deployment)
+RUN apt-get update && apt-get install -y curl gnupg && \
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g @google/clasp && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install python dependencies
+COPY backend/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy core engine components and GAS deployment files
+# Note: .clasprc.json MUST be in the project root on your Mac first
+COPY core_scraper_engine.py scraper_events_fast.py gas_mailer.gs .clasprc.json* /app/
+COPY gas_deploy /app/gas_deploy/
+COPY backend /app/backend/
+
+# Metadata
+EXPOSE 8443
+WORKDIR /app/backend
+
+# Start production server
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8443", "--ssl-keyfile", "/app/backend/private.key", "--ssl-certfile", "/app/backend/cert.pem"]

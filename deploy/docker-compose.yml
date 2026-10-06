@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8443:8443"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend/sqlite.db:/app/backend/sqlite.db
+      - ./backend/backend.log:/app/backend/backend.log
+      - results_data:/app/results
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  results_data:

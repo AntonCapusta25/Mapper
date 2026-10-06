@@ -1,13 +1,17 @@
-
-// Static App.js for Deployment
+// Static deployment - loads JSON files directly
 const API_BASE = '';
 
 // State
 let allRestaurants = [];
 let filteredRestaurants = [];
 let stats = {};
+let allFarms = [];
+let filteredFarms = [];
+let farmsStats = {};
 let map;
+let farmsMap;
 let geoJsonLayer;
+let farmsGeoJsonLayer;
 let districtRecommendations = {};
 
 // PC4 to Neighborhood Name Mapping
@@ -33,11 +37,9 @@ const pc4ToNeighborhood = {
     '1106': 'Zuidoost - Holendrecht', '1107': 'Zuidoost - Reigersbos', '1108': 'Zuidoost - Gein',
     '1109': 'Zuidoost - Driemond', '1031': 'Noord - Buiksloterham', '1032': 'Noord - Tuindorp Oostzaan',
     '1033': 'Noord - Buiksloot', '1034': 'Noord - Buiksloot', '1035': 'Noord - Kadoelen',
-    '1036': 'Noord - Nieuwendam', '1021': 'Noord - Overhoeks', '1043': 'Nieuw-West - Geuzenveld',
+    '1036': 'Noord - Nieuwendam', '1043': 'Nieuw-West - Geuzenveld',
     '1044': 'Nieuw-West - Slotermeer', '1045': 'Nieuw-West - Slotervaart', '1046': 'Nieuw-West - Slotermeer',
-    '1047': 'Nieuw-West - Osdorp', '1061': 'Nieuw-West - Overtoomse Veld', '1062': 'Nieuw-West - Zuidas',
-    '1064': 'Nieuw-West - Slotervaart', '1065': 'Nieuw-West - Osdorp', '1066': 'Nieuw-West - De Aker',
-    '1067': 'Nieuw-West - Osdorp', '1068': 'Nieuw-West - Buitenveldert', '1069': 'Nieuw-West - Slotervaart'
+    '1047': 'Nieuw-West - Osdorp'
 };
 
 function getNeighborhoodName(pc4) {
@@ -60,13 +62,71 @@ const totalRestaurants = document.getElementById('totalRestaurants');
 const avgRating = document.getElementById('avgRating');
 const totalReviews = document.getElementById('totalReviews');
 
+// Farms DOM Elements
+const farmsGrid = document.getElementById('farmsGrid');
+const farmsLoadingState = document.getElementById('farmsLoadingState');
+const farmsEmptyState = document.getElementById('farmsEmptyState');
+const farmsSearchInput = document.getElementById('farmsSearchInput');
+const farmTypeFilter = document.getElementById('farmTypeFilter');
+const farmsMinRating = document.getElementById('farmsMinRating');
+const farmsSortBy = document.getElementById('farmsSortBy');
+const farmsResultsCount = document.getElementById('farmsResultsCount');
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadStats();
     loadRestaurants();
+    loadFarmsStats();
+    loadFarms();
     initMap();
     setupEventListeners();
+    setupTabSwitching();
 });
+
+// Tab Switching
+function setupTabSwitching() {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const views = document.querySelectorAll('.view-section');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetView = tab.dataset.tab;
+
+            // Update tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Update views
+            views.forEach(v => v.style.display = 'none');
+            const view = document.getElementById(targetView);
+            if (view) view.style.display = 'block';
+
+            // Update stats bar
+            if (targetView === 'farms-view') {
+                updateStatsDisplay('farms');
+                if (farmsMap) farmsMap.invalidateSize();
+                if (!farmsMap) initFarmsMap();
+            } else if (targetView === 'map-view') {
+                updateStatsDisplay('restaurants');
+                if (map) map.invalidateSize();
+            }
+        });
+    });
+}
+
+function updateStatsDisplay(type = 'restaurants') {
+    if (type === 'farms') {
+        totalRestaurants.textContent = farmsStats.total_farms || 0;
+        avgRating.textContent = farmsStats.average_rating ? `${farmsStats.average_rating}⭐` : 'N/A';
+        totalReviews.textContent = formatNumber(farmsStats.total_reviews || 0);
+        document.querySelector('#totalRestaurants').parentElement.querySelector('.stat-label').textContent = 'Farms';
+    } else {
+        totalRestaurants.textContent = stats.total_restaurants || 0;
+        avgRating.textContent = stats.average_rating ? `${stats.average_rating}⭐` : 'N/A';
+        totalReviews.textContent = formatNumber(stats.total_reviews || 0);
+        document.querySelector('#totalRestaurants').parentElement.querySelector('.stat-label').textContent = 'Restaurants';
+    }
+}
 
 // Initialize Map
 async function initMap() {
@@ -79,6 +139,20 @@ async function initMap() {
 
     await loadRecommendations();
     await loadMapData();
+}
+
+// Initialize Farms Map
+async function initFarmsMap() {
+    if (farmsMap) return;
+
+    farmsMap = L.map('farmsMap').setView([52.3676, 4.9041], 12);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(farmsMap);
+
+    await loadFarmsMapData();
 }
 
 async function loadRecommendations() {
@@ -111,9 +185,30 @@ async function loadMapData() {
     } catch (error) { console.error('Error loading map data:', error); }
 }
 
-function computePC4Stats(restaurants) {
+async function loadFarmsMapData() {
+    try {
+        const response = await fetch('./amsterdam_pc4.geojson');
+        if (!response.ok) return;
+        const geojson = await response.json();
+        const statsByPC4 = computePC4Stats(allFarms);
+
+        const enrichedFeatures = geojson.features.map(feature => {
+            const pc4 = feature.properties.pc4;
+            const stats = statsByPC4[pc4] || { count: 0, avg_rating: 0, top_cuisines: [] };
+            return { ...feature, properties: { ...feature.properties, ...stats } };
+        });
+
+        if (farmsGeoJsonLayer) farmsMap.removeLayer(farmsGeoJsonLayer);
+        farmsGeoJsonLayer = L.geoJSON({ type: "FeatureCollection", features: enrichedFeatures }, {
+            style: styleFarmsFeature,
+            onEachFeature: onEachFarmsFeature
+        }).addTo(farmsMap);
+    } catch (error) { console.error('Error loading farms map data:', error); }
+}
+
+function computePC4Stats(items) {
     const stats = {};
-    restaurants.forEach(r => {
+    items.forEach(r => {
         const address = r.address || '';
         const match = address.match(/\b(\d{4})\s*[A-Z]{2}\b/);
         if (match) {
@@ -135,13 +230,16 @@ function computePC4Stats(restaurants) {
     return stats;
 }
 
-function refreshMapData() {
-    if (map && allRestaurants.length > 0) loadMapData();
-}
-
 function styleFeature(feature) {
     return {
         fillColor: getColor(feature.properties.count),
+        weight: 2, opacity: 1, color: 'white', dashArray: '3', fillOpacity: 0.7
+    };
+}
+
+function styleFarmsFeature(feature) {
+    return {
+        fillColor: getFarmsColor(feature.properties.count),
         weight: 2, opacity: 1, color: 'white', dashArray: '3', fillOpacity: 0.7
     };
 }
@@ -150,8 +248,16 @@ function getColor(d) {
     return d > 50 ? '#800026' : d > 20 ? '#BD0026' : d > 10 ? '#E31A1C' : d > 5 ? '#FC4E2A' : d > 2 ? '#FD8D3C' : d > 0 ? '#FEB24C' : '#FFEDA0';
 }
 
+function getFarmsColor(d) {
+    return d > 50 ? '#006d2c' : d > 20 ? '#238b45' : d > 10 ? '#41ab5d' : d > 5 ? '#74c476' : d > 2 ? '#a1d99b' : d > 0 ? '#c7e9c0' : '#edf8e9';
+}
+
 function onEachFeature(feature, layer) {
     layer.on({ mouseover: highlightFeature, mouseout: resetHighlight, click: zoomToFeature });
+}
+
+function onEachFarmsFeature(feature, layer) {
+    layer.on({ mouseover: highlightFarmsFeature, mouseout: resetFarmsHighlight, click: zoomToFarmsFeature });
 }
 
 function highlightFeature(e) {
@@ -161,32 +267,31 @@ function highlightFeature(e) {
 
     const props = layer.feature.properties;
     const neighborhoodName = getNeighborhoodName(props.pc4);
-    const rec = districtRecommendations[props.pc4];
-    
+
     let tooltipContent = `<div style="min-width: 280px;"><strong style="font-size: 1.1em;">${neighborhoodName}</strong><br><small style="color: #a0aec0;">PC4: ${props.pc4 || 'Unknown'}</small><hr style="margin: 8px 0; border-color: rgba(255,255,255,0.1);">`;
-    
-    if (rec) {
-        tooltipContent += `<div style="margin-bottom: 8px;"><strong>📊 Market Overview</strong><br><small>• Restaurants: ${rec.total_restaurants} (${rec.saturation} saturation)<br>• Avg Rating: ${rec.avg_rating}⭐<br></small></div>`;
-        if (rec.top_cuisines && rec.top_cuisines.length > 0) {
-            const cuisineList = rec.top_cuisines.map((c, i) => {
-                const count = rec.cuisine_counts ? rec.cuisine_counts[c] : '';
-                return `${i + 1}. ${c}${count ? ` (${count})` : ''}`;
-            }).join('<br>                    ');
-            tooltipContent += `<div style="margin-bottom: 8px;"><strong>🍽️ Top Cuisines</strong><br><small>${cuisineList}</small></div>`;
-        }
-        if (rec.recommendation) {
-            tooltipContent += `<div style="background: rgba(67, 233, 123, 0.1); padding: 6px; border-radius: 4px; margin-top: 8px;"><strong style="color: #43e97b;">💡 Opportunities</strong><br><small style="line-height: 1.4;">${rec.recommendation}</small></div>`;
-        }
-    } else {
-        tooltipContent += `<small>Restaurants: ${props.count}<br>Avg Rating: ${props.avg_rating || 'N/A'}⭐<br>Top: ${props.top_cuisines ? props.top_cuisines.join(', ') : 'None'}</small>`;
-    }
-    tooltipContent += `</div>`;
-    
+    tooltipContent += `<small>Restaurants: ${props.count}<br>Avg Rating: ${props.avg_rating || 'N/A'}⭐<br>Top: ${props.top_cuisines ? props.top_cuisines.join(', ') : 'None'}</small></div>`;
+
+    layer.bindTooltip(tooltipContent, { maxWidth: 350, className: 'custom-tooltip' }).openTooltip();
+}
+
+function highlightFarmsFeature(e) {
+    const layer = e.target;
+    layer.setStyle({ weight: 5, color: '#ffffff', dashArray: '', fillOpacity: 0.7 });
+    layer.bringToFront();
+
+    const props = layer.feature.properties;
+    const neighborhoodName = getNeighborhoodName(props.pc4);
+
+    let tooltipContent = `<div style="min-width: 280px;"><strong style="font-size: 1.1em;">${neighborhoodName}</strong><br><small style="color: #a0aec0;">PC4: ${props.pc4 || 'Unknown'}</small><hr style="margin: 8px 0; border-color: rgba(255,255,255,0.1);">`;
+    tooltipContent += `<small>Farms: ${props.count}<br>Avg Rating: ${props.avg_rating || 'N/A'}⭐<br>Top: ${props.top_cuisines ? props.top_cuisines.join(', ') : 'None'}</small></div>`;
+
     layer.bindTooltip(tooltipContent, { maxWidth: 350, className: 'custom-tooltip' }).openTooltip();
 }
 
 function resetHighlight(e) { geoJsonLayer.resetStyle(e.target); }
+function resetFarmsHighlight(e) { farmsGeoJsonLayer.resetStyle(e.target); }
 function zoomToFeature(e) { map.fitBounds(e.target.getBounds()); }
+function zoomToFarmsFeature(e) { farmsMap.fitBounds(e.target.getBounds()); }
 
 function setupEventListeners() {
     applyFiltersBtn.addEventListener('click', applyFilters);
@@ -194,24 +299,22 @@ function setupEventListeners() {
     exportDataBtn.addEventListener('click', exportToCSV);
     document.getElementById('reloadData').addEventListener('click', reloadData);
     searchInput.addEventListener('input', debounce(applyFilters, 300));
+
+    // Farms listeners
+    document.getElementById('applyFarmsFilters').addEventListener('click', applyFarmsFilters);
+    document.getElementById('resetFarmsFilters').addEventListener('click', resetFarmsFilters);
+    document.getElementById('exportFarmsData').addEventListener('click', exportFarmsToCSV);
+    document.getElementById('reloadFarmsData').addEventListener('click', reloadFarmsData);
 }
 
 async function reloadData() {
-    const btn = document.getElementById('reloadData');
-    const originalText = btn.textContent;
-    btn.textContent = '🔄 Reloading...';
-    btn.disabled = true;
-    try {
-        await loadStats();
-        await loadRestaurants();
-        refreshMapData();
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.textContent = `Loaded ${allRestaurants.length} restaurants!`;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 3000);
-    } catch (error) { console.error('Error reloading data:', error); alert('Failed to reload data'); }
-    finally { btn.textContent = originalText; btn.disabled = false; }
+    await loadStats();
+    await loadRestaurants();
+}
+
+async function reloadFarmsData() {
+    await loadFarmsStats();
+    await loadFarms();
 }
 
 async function loadStats() {
@@ -219,23 +322,34 @@ async function loadStats() {
         const response = await fetch('./restaurants_data.json');
         const data = await response.json();
         const restaurants = Array.isArray(data) ? data : (data.restaurants || []);
-        
+
         const ratings = restaurants.filter(r => r.rating).map(r => r.rating);
         const reviews = restaurants.filter(r => r.reviews).map(r => r.reviews);
-        
+
         stats = {
             total_restaurants: restaurants.length,
             average_rating: ratings.length > 0 ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(2) : 0,
             total_reviews: reviews.reduce((a, b) => a + b, 0)
         };
-        updateStatsDisplay();
+        updateStatsDisplay('restaurants');
     } catch (error) { console.error('Error loading stats:', error); }
 }
 
-function updateStatsDisplay() {
-    totalRestaurants.textContent = stats.total_restaurants || 0;
-    avgRating.textContent = stats.average_rating ? `${stats.average_rating}⭐` : 'N/A';
-    totalReviews.textContent = formatNumber(stats.total_reviews || 0);
+async function loadFarmsStats() {
+    try {
+        const response = await fetch('./farms_data.json');
+        const data = await response.json();
+        const farms = Array.isArray(data) ? data : (data.farms || []);
+
+        const ratings = farms.filter(f => f.rating).map(f => f.rating);
+        const reviews = farms.filter(f => f.reviews).map(f => f.reviews);
+
+        farmsStats = {
+            total_farms: farms.length,
+            average_rating: ratings.length > 0 ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(2) : 0,
+            total_reviews: reviews.reduce((a, b) => a + b, 0)
+        };
+    } catch (error) { console.error('Error loading farms stats:', error); }
 }
 
 async function loadRestaurants() {
@@ -247,9 +361,22 @@ async function loadRestaurants() {
         filteredRestaurants = allRestaurants;
         await loadCuisines();
         renderRestaurants();
-        refreshMapData();
+        if (map) loadMapData();
         hideLoading();
     } catch (error) { console.error('Error loading restaurants:', error); hideLoading(); showEmpty(); }
+}
+
+async function loadFarms() {
+    showFarmsLoading();
+    try {
+        const response = await fetch('./farms_data.json');
+        const data = await response.json();
+        allFarms = Array.isArray(data) ? data : (data.farms || []);
+        filteredFarms = allFarms;
+        await loadFarmTypes();
+        renderFarms();
+        hideFarmsLoading();
+    } catch (error) { console.error('Error loading farms:', error); hideFarmsLoading(); showFarmsEmpty(); }
 }
 
 async function loadCuisines() {
@@ -267,6 +394,21 @@ async function loadCuisines() {
     } catch (error) { console.error('Error loading cuisines:', error); }
 }
 
+async function loadFarmTypes() {
+    try {
+        const types = new Set();
+        allFarms.forEach(f => { if (f.cuisine) types.add(f.cuisine); });
+        const sortedTypes = Array.from(types).sort();
+        farmTypeFilter.innerHTML = '<option value="">All Types</option>';
+        sortedTypes.forEach(type => {
+            const option = document.createElement('option');
+            option.value = type;
+            option.textContent = type;
+            farmTypeFilter.appendChild(option);
+        });
+    } catch (error) { console.error('Error loading farm types:', error); }
+}
+
 async function applyFilters() {
     const search = searchInput.value.trim().toLowerCase();
     const cuisine = cuisineFilter.value.toLowerCase();
@@ -278,7 +420,7 @@ async function applyFilters() {
     try {
         let filtered = [...allRestaurants];
         if (search) {
-            filtered = filtered.filter(r => 
+            filtered = filtered.filter(r =>
                 (r.name || '').toLowerCase().includes(search) ||
                 (r.address || '').toLowerCase().includes(search) ||
                 (r.cuisine || '').toLowerCase().includes(search)
@@ -297,10 +439,45 @@ async function applyFilters() {
     } catch (error) { console.error('Error applying filters:', error); hideLoading(); }
 }
 
+async function applyFarmsFilters() {
+    const search = farmsSearchInput.value.trim().toLowerCase();
+    const type = farmTypeFilter.value;
+    const rating = parseFloat(farmsMinRating.value);
+    const sort = farmsSortBy.value;
+
+    showFarmsLoading();
+
+    try {
+        let filtered = [...allFarms];
+        if (search) {
+            filtered = filtered.filter(f =>
+                (f.name || '').toLowerCase().includes(search) ||
+                (f.address || '').toLowerCase().includes(search)
+            );
+        }
+        if (type) filtered = filtered.filter(f => f.cuisine === type);
+        if (rating) filtered = filtered.filter(f => f.rating && f.rating >= rating);
+
+        if (sort === 'rating') filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        else if (sort === 'reviews') filtered.sort((a, b) => (b.reviews || 0) - (a.reviews || 0));
+        else if (sort === 'name') filtered.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+        filteredFarms = filtered;
+        renderFarms();
+        hideFarmsLoading();
+    } catch (error) { console.error('Error applying farms filters:', error); hideFarmsLoading(); }
+}
+
 function resetFilters() {
     searchInput.value = ''; cuisineFilter.value = ''; minRating.value = ''; sortBy.value = 'rating';
     filteredRestaurants = allRestaurants;
     renderRestaurants();
+}
+
+function resetFarmsFilters() {
+    farmsSearchInput.value = ''; farmTypeFilter.value = ''; farmsMinRating.value = ''; farmsSortBy.value = 'rating';
+    filteredFarms = allFarms;
+    renderFarms();
 }
 
 function renderRestaurants() {
@@ -311,6 +488,17 @@ function renderRestaurants() {
     filteredRestaurants.forEach(restaurant => {
         const card = createRestaurantCard(restaurant);
         restaurantsGrid.appendChild(card);
+    });
+}
+
+function renderFarms() {
+    farmsResultsCount.textContent = filteredFarms.length;
+    if (filteredFarms.length === 0) { showFarmsEmpty(); return; }
+    farmsGrid.innerHTML = '';
+    farmsEmptyState.style.display = 'none';
+    filteredFarms.forEach(farm => {
+        const card = createFarmCard(farm);
+        farmsGrid.appendChild(card);
     });
 }
 
@@ -339,6 +527,30 @@ function createRestaurantCard(restaurant) {
     return card;
 }
 
+function createFarmCard(farm) {
+    const card = document.createElement('div');
+    card.className = 'restaurant-card';
+    const rating = farm.rating ? farm.rating.toFixed(1) : 'N/A';
+    const reviews = farm.reviews ? formatNumber(farm.reviews) : '0';
+    const mapsUrl = farm.latitude && farm.longitude
+        ? `https://www.google.com/maps/search/?api=1&query=${farm.latitude},${farm.longitude}`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(farm.name)}`;
+
+    card.innerHTML = `
+        <div class="card-header"><div><h3 class="restaurant-name">${escapeHtml(farm.name)}</h3></div>${farm.rating ? `<div class="rating-badge">⭐ ${rating}</div>` : ''}</div>
+        <div class="card-info">
+            <div class="info-row"><span class="info-icon">📍</span><span>${escapeHtml(farm.address || 'Address not available')}</span></div>
+            <div class="info-row"><span class="info-icon">📞</span><span>${escapeHtml(farm.phone || 'Phone not available')}</span></div>
+            <div class="info-row"><span class="info-icon">💬</span><span>${reviews} reviews</span></div>
+            <div class="info-row"><span class="cuisine-tag">🌾 ${escapeHtml(farm.cuisine || 'Type not specified')}</span></div>
+        </div>
+        <div class="card-footer">
+            <a href="${mapsUrl}" target="_blank" class="card-btn">🗺️ View on Maps</a>
+            ${farm.website ? `<a href="${escapeHtml(farm.website)}" target="_blank" class="card-btn">🌐 Website</a>` : ''}
+        </div>`;
+    return card;
+}
+
 function exportToCSV() {
     if (filteredRestaurants.length === 0) { alert('No restaurants to export!'); return; }
     const headers = ['Name', 'Rating', 'Reviews', 'Address', 'Phone', 'Cuisine', 'Price Level', 'Website', 'Latitude', 'Longitude'];
@@ -354,9 +566,27 @@ function exportToCSV() {
     link.click();
 }
 
+function exportFarmsToCSV() {
+    if (filteredFarms.length === 0) { alert('No farms to export!'); return; }
+    const headers = ['Name', 'Rating', 'Reviews', 'Address', 'Phone', 'Type', 'Website', 'Latitude', 'Longitude'];
+    const csvContent = [headers.join(','), ...filteredFarms.map(f => [
+        `"${(f.name || '').replace(/"/g, '""')}"`, f.rating || '', f.reviews || '', `"${(f.address || '').replace(/"/g, '""')}"`,
+        `"${(f.phone || '').replace(/"/g, '""')}"`, `"${(f.cuisine || '').replace(/"/g, '""')}"`,
+        `"${(f.website || '').replace(/"/g, '""')}"`, f.latitude || '', f.longitude || ''
+    ].join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `amsterdam-farms-${new Date().toISOString().split('T')[0]}.csv`;
+    link.click();
+}
+
 function showLoading() { loadingState.style.display = 'block'; restaurantsGrid.style.display = 'none'; emptyState.style.display = 'none'; }
 function hideLoading() { loadingState.style.display = 'none'; restaurantsGrid.style.display = 'grid'; }
 function showEmpty() { emptyState.style.display = 'block'; restaurantsGrid.style.display = 'none'; }
+function showFarmsLoading() { farmsLoadingState.style.display = 'block'; farmsGrid.style.display = 'none'; farmsEmptyState.style.display = 'none'; }
+function hideFarmsLoading() { farmsLoadingState.style.display = 'none'; farmsGrid.style.display = 'grid'; }
+function showFarmsEmpty() { farmsEmptyState.style.display = 'block'; farmsGrid.style.display = 'none'; }
 function formatNumber(num) { if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M'; if (num >= 1000) return (num / 1000).toFixed(1) + 'K'; return num.toString(); }
 function escapeHtml(text) { const div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
-function debounce(func, wait) { let timeout; return function(...args) { clearTimeout(timeout); timeout = setTimeout(() => func(...args), wait); }; }
+function debounce(func, wait) { let timeout; return function (...args) { clearTimeout(timeout); timeout = setTimeout(() => func(...args), wait); }; }
