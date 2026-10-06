@@ -1,0 +1,413 @@
+/* District Selector */
+.district-selector {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.district-selector label {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.district-selector select {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem 1.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.district-selector select:hover {
+    border-color: var(--accent-purple);
+}
+
+.district-selector select:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* AI Insights Card */
+.ai-insights-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.ai-insights-content {
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-md);
+    min-height: 200px;
+}
+
+.ai-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.ai-text p {
+    margin-bottom: var(--spacing-md);
+}
+
+.ai-text strong {
+    color: var(--accent-purple);
+    font-weight: 700;
+}
+
+/* District Metrics Grid */
+.district-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+/* Metric List */
+.metric-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.metric-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.metric-label {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+.metric-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Badges */
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-high {
+    background: rgba(245, 87, 108, 0.2);
+    color: #f5576c;
+}
+
+.badge-medium {
+    background: rgba(255, 217, 61, 0.2);
+    color: #ffd93d;
+}
+
+.badge-low {
+    background: rgba(67, 233, 123, 0.2);
+    color: #43e97b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .district-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .district-selector select {
+        max-width: 100%;
+    }
+}
+
+/* City Summary Dashboard */
+.analytics-view-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.view-toggle-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.view-toggle-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.city-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Strategic Recommendations */
+.strategic-card {
+    background: linear-gradient(135deg, #f6f8fd 0%, #f1f4f9 100%);
+    border-left: 5px solid var(--primary-color);
+}
+
+.strategic-content p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.strategic-content strong {
+    color: var(--primary-color);
+}
+
+/* Opportunity Items */
+.opportunity-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.opportunity-item:last-child {
+    border-bottom: none;
+}
+
+.opportunity-item:hover {
+    background: var(--bg-color);
+}
+
+.opportunity-rank {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    width: 2.5rem;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.opportunity-details {
+    flex: 1;
+}
+
+.opportunity-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.opportunity-score {
+    background: var(--success-color);
+    color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.opportunity-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.opportunity-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.2rem;
+    font-weight: 500;
+}
+
+.tag-quality {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.tag-cuisine {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+/* Cuisine Items */
+.cuisine-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cuisine-rank {
+    font-weight: 600;
+    color: var(--text-secondary);
+    width: 2rem;
+}
+
+.cuisine-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opportunity-badge {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.badge-high {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.badge-medium {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.badge-low {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Investment Table */
+.investment-table-container {
+    overflow-x: auto;
+}
+
+.investment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.investment-table th,
+.investment-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.investment-table th {
+    background: var(--bg-color);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.score-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.recommendation-cell {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Matrix Quadrants */
+.matrix-quadrants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.matrix-quadrant {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.quadrant-best {
+    border-top: 4px solid #4caf50;
+    background: #f1f8e9;
+}
+
+.quadrant-competitive {
+    border-top: 4px solid #ff9800;
+    background: #fff3e0;
+}
+
+.quadrant-emerging {
+    border-top: 4px solid #2196f3;
+    background: #e3f2fd;
+}
+
+.quadrant-challenging {
+    border-top: 4px solid #f44336;
+    background: #ffebee;
+}
+
+.quadrant-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.quadrant-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.quadrant-list {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.quadrant-item {
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .city-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .matrix-quadrants {
+        grid-template-columns: 1fr;
+    }
+}

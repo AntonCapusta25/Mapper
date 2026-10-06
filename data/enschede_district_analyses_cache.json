@@ -1,0 +1,923 @@
+{
+  "generated_at": "2026-10-06T17:26:57.721941",
+  "total_districts": 34,
+  "total_restaurants": 834,
+  "districts": {
+    "7511": {
+      "pc4": "7511",
+      "name": "Enschede Binnenstad / Oude Markt",
+      "count": 334,
+      "avg_rating": 4.45,
+      "reviews_total": 14203,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Argentijns restaurant",
+          28
+        ],
+        [
+          "Café",
+          14
+        ],
+        [
+          "Restaurant",
+          13
+        ],
+        [
+          "Catering",
+          12
+        ],
+        [
+          "Bar",
+          11
+        ]
+      ]
+    },
+    "7512": {
+      "pc4": "7512",
+      "name": "Enschede Centrum-Oost / De Heurne / Bothoven",
+      "count": 34,
+      "avg_rating": 4.26,
+      "reviews_total": 1407,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Maaltijdbezorging",
+          5
+        ],
+        [
+          "Afhaalrestaurant",
+          2
+        ],
+        [
+          "Broodjeswinkel",
+          2
+        ],
+        [
+          "Hoofdkantoor",
+          2
+        ],
+        [
+          "Afhaalpizza",
+          1
+        ]
+      ]
+    },
+    "7513": {
+      "pc4": "7513",
+      "name": "Enschede Horstlanden / Veldkamp / Getfert",
+      "count": 17,
+      "avg_rating": 4.49,
+      "reviews_total": 764,
+      "opportunity_score": 9.7,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          4
+        ],
+        [
+          "Bakkerij",
+          2
+        ],
+        [
+          "Sushi takeaway",
+          1
+        ],
+        [
+          "Turks restaurant",
+          1
+        ],
+        [
+          "Snackbar",
+          1
+        ]
+      ]
+    },
+    "7514": {
+      "pc4": "7514",
+      "name": "Enschede Boddenkamp / Walhof",
+      "count": 24,
+      "avg_rating": 4.4,
+      "reviews_total": 1011,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Pizzeria",
+          2
+        ],
+        [
+          "Turks restaurant",
+          2
+        ],
+        [
+          "Restaurant",
+          2
+        ],
+        [
+          "Modern-Frans restaurant",
+          1
+        ],
+        [
+          "Japans restaurant",
+          1
+        ]
+      ]
+    },
+    "7521": {
+      "pc4": "7521",
+      "name": "Enschede Twekkelerveld / Tubantia",
+      "count": 52,
+      "avg_rating": 4.25,
+      "reviews_total": 2042,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          8
+        ],
+        [
+          "Cafetaria",
+          4
+        ],
+        [
+          "Catering",
+          3
+        ],
+        [
+          "Pizzeria",
+          2
+        ],
+        [
+          "Snackbar",
+          2
+        ]
+      ]
+    },
+    "7522": {
+      "pc4": "7522",
+      "name": "Enschede Kennispark / UT / Bolhaar",
+      "count": 25,
+      "avg_rating": 4.45,
+      "reviews_total": 947,
+      "opportunity_score": 9.2,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          7
+        ],
+        [
+          "Bar",
+          4
+        ],
+        [
+          "Theehuis",
+          2
+        ],
+        [
+          "Afhaalpizza",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ]
+      ]
+    },
+    "7523": {
+      "pc4": "7523",
+      "name": "Enschede Roombeek / Mekkelholt / Deppenbroek",
+      "count": 28,
+      "avg_rating": 4.31,
+      "reviews_total": 1207,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Catering",
+          2
+        ],
+        [
+          "Chinees restaurant",
+          2
+        ],
+        [
+          "Turks restaurant",
+          2
+        ],
+        [
+          "Delicatessenwinkel",
+          2
+        ],
+        [
+          "Supermarkt",
+          2
+        ]
+      ]
+    },
+    "7524": {
+      "pc4": "7524",
+      "name": "Enschede De Eschmarke Noord",
+      "count": 17,
+      "avg_rating": 4.4,
+      "reviews_total": 1262,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Bakkerij",
+          2
+        ],
+        [
+          "IJssalon",
+          2
+        ],
+        [
+          "Restaurant",
+          1
+        ],
+        [
+          "Broodjeswinkel",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ]
+      ]
+    },
+    "7525": {
+      "pc4": "7525",
+      "name": "Enschede District 7525",
+      "count": 4,
+      "avg_rating": 4.3,
+      "reviews_total": 172,
+      "opportunity_score": 7.1,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          3
+        ],
+        [
+          "Bar",
+          1
+        ]
+      ]
+    },
+    "7531": {
+      "pc4": "7531",
+      "name": "Enschede Ribbelt / Stokhorst",
+      "count": 15,
+      "avg_rating": 4.44,
+      "reviews_total": 621,
+      "opportunity_score": 9.9,
+      "top_cuisines": [
+        [
+          "Pizzeria",
+          2
+        ],
+        [
+          "Bakkerij",
+          2
+        ],
+        [
+          "Catering",
+          2
+        ],
+        [
+          "Partycentrum",
+          1
+        ],
+        [
+          "Kaaswinkel",
+          1
+        ]
+      ]
+    },
+    "7532": {
+      "pc4": "7532",
+      "name": "Enschede Eilermark / Glanerbrug Noord",
+      "count": 5,
+      "avg_rating": 4.72,
+      "reviews_total": 236,
+      "opportunity_score": 8.7,
+      "top_cuisines": [
+        [
+          "Café",
+          1
+        ],
+        [
+          "Familierestaurant",
+          1
+        ],
+        [
+          "Broodjeswinkel",
+          1
+        ],
+        [
+          "Dakdekker",
+          1
+        ],
+        [
+          "Banketbakkerij",
+          1
+        ]
+      ]
+    },
+    "7533": {
+      "pc4": "7533",
+      "name": "Enschede Dolphia / De Eschmarke",
+      "count": 17,
+      "avg_rating": 4.27,
+      "reviews_total": 683,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Pizzeria",
+          2
+        ],
+        [
+          "Eclectisch restaurant",
+          1
+        ],
+        [
+          "Sushirestaurant",
+          1
+        ],
+        [
+          "Sushi takeaway",
+          1
+        ],
+        [
+          "Grillrestaurant",
+          1
+        ]
+      ]
+    },
+    "7534": {
+      "pc4": "7534",
+      "name": "Enschede Glanerbrug Centrum",
+      "count": 28,
+      "avg_rating": 4.44,
+      "reviews_total": 1199,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Pizzeria",
+          3
+        ],
+        [
+          "Cafetaria",
+          3
+        ],
+        [
+          "Bakkerij",
+          2
+        ],
+        [
+          "Afhaalrestaurant",
+          1
+        ],
+        [
+          "Chinees afhaalrestaurant",
+          1
+        ]
+      ]
+    },
+    "7535": {
+      "pc4": "7535",
+      "name": "Enschede Lonneker",
+      "count": 4,
+      "avg_rating": 4.38,
+      "reviews_total": 175,
+      "opportunity_score": 7.9,
+      "top_cuisines": [
+        [
+          "Europees restaurant",
+          1
+        ],
+        [
+          "Theehuis",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ],
+        [
+          "Muziekvereniging",
+          1
+        ]
+      ]
+    },
+    "7541": {
+      "pc4": "7541",
+      "name": "Enschede Hogeland",
+      "count": 11,
+      "avg_rating": 4.32,
+      "reviews_total": 389,
+      "opportunity_score": 9.3,
+      "top_cuisines": [
+        [
+          "Snackbar",
+          2
+        ],
+        [
+          "Maaltijdbezorging",
+          2
+        ],
+        [
+          "Bakkerij",
+          2
+        ],
+        [
+          "Barbecuerestaurant",
+          1
+        ],
+        [
+          "Broodjeswinkel",
+          1
+        ]
+      ]
+    },
+    "7542": {
+      "pc4": "7542",
+      "name": "Enschede Wesselerbrink Noord",
+      "count": 7,
+      "avg_rating": 4.44,
+      "reviews_total": 311,
+      "opportunity_score": 9.5,
+      "top_cuisines": [
+        [
+          "Pizzeria",
+          1
+        ],
+        [
+          "Frituur",
+          1
+        ],
+        [
+          "Brasserie",
+          1
+        ],
+        [
+          "Bakkerij",
+          1
+        ],
+        [
+          "Maaltijdbezorging",
+          1
+        ]
+      ]
+    },
+    "7543": {
+      "pc4": "7543",
+      "name": "Enschede Wesselerbrink Zuid",
+      "count": 20,
+      "avg_rating": 4.35,
+      "reviews_total": 696,
+      "opportunity_score": 9.4,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          4
+        ],
+        [
+          "Cafetaria",
+          2
+        ],
+        [
+          "Hamburgerrestaurant",
+          2
+        ],
+        [
+          "Döner kebab-restaurant",
+          1
+        ],
+        [
+          "Libanees restaurant",
+          1
+        ]
+      ]
+    },
+    "7544": {
+      "pc4": "7544",
+      "name": "Enschede Helmerhoek",
+      "count": 27,
+      "avg_rating": 4.42,
+      "reviews_total": 1106,
+      "opportunity_score": 9.6,
+      "top_cuisines": [
+        [
+          "Bakkerij",
+          5
+        ],
+        [
+          "Cafetaria",
+          3
+        ],
+        [
+          "Pizzeria",
+          2
+        ],
+        [
+          "Catering",
+          2
+        ],
+        [
+          "Slagerij",
+          2
+        ]
+      ]
+    },
+    "7545": {
+      "pc4": "7545",
+      "name": "Enschede Stadsveld / Pathmos",
+      "count": 42,
+      "avg_rating": 4.42,
+      "reviews_total": 1637,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          4
+        ],
+        [
+          "Bakkerij",
+          4
+        ],
+        [
+          "Cafetaria",
+          3
+        ],
+        [
+          "Maaltijdbezorging",
+          3
+        ],
+        [
+          "Snackbar",
+          3
+        ]
+      ]
+    },
+    "7546": {
+      "pc4": "7546",
+      "name": "Enschede Boswinkel / Ruwenbos",
+      "count": 8,
+      "avg_rating": 4.17,
+      "reviews_total": 292,
+      "opportunity_score": 9.4,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          2
+        ],
+        [
+          "Sushirestaurant",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ],
+        [
+          "Bistro",
+          1
+        ],
+        [
+          "Maaltijdbezorging",
+          1
+        ]
+      ]
+    },
+    "7547": {
+      "pc4": "7547",
+      "name": "Enschede Usselo",
+      "count": 22,
+      "avg_rating": 4.54,
+      "reviews_total": 922,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Groothandelaar",
+          3
+        ],
+        [
+          "Catering",
+          2
+        ],
+        [
+          "Groothandel in levensmiddelen",
+          2
+        ],
+        [
+          "Snackbar",
+          1
+        ],
+        [
+          "Broodjeswinkel",
+          1
+        ]
+      ]
+    },
+    "7548": {
+      "pc4": "7548",
+      "name": "Enschede Boekelo",
+      "count": 12,
+      "avg_rating": 4.63,
+      "reviews_total": 509,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          2
+        ],
+        [
+          "IJssalon",
+          2
+        ],
+        [
+          "Pizzeria",
+          1
+        ],
+        [
+          "Steakhouse",
+          1
+        ],
+        [
+          "Sundaerestaurant",
+          1
+        ]
+      ]
+    },
+    "7551": {
+      "pc4": "7551",
+      "name": "Enschede District 7551",
+      "count": 39,
+      "avg_rating": 4.39,
+      "reviews_total": 1667,
+      "opportunity_score": 10.0,
+      "top_cuisines": [
+        [
+          "Cafetaria",
+          3
+        ],
+        [
+          "Sushirestaurant",
+          2
+        ],
+        [
+          "Eclectisch restaurant",
+          2
+        ],
+        [
+          "Italiaans restaurant",
+          2
+        ],
+        [
+          "Döner kebab-restaurant",
+          2
+        ]
+      ]
+    },
+    "7552": {
+      "pc4": "7552",
+      "name": "Enschede District 7552",
+      "count": 5,
+      "avg_rating": 4.08,
+      "reviews_total": 204,
+      "opportunity_score": 8.3,
+      "top_cuisines": [
+        [
+          "Koffiehuis",
+          1
+        ],
+        [
+          "Chinees restaurant",
+          1
+        ],
+        [
+          "Sushi takeaway",
+          1
+        ],
+        [
+          "Frituur",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ]
+      ]
+    },
+    "7553": {
+      "pc4": "7553",
+      "name": "Enschede District 7553",
+      "count": 12,
+      "avg_rating": 4.3,
+      "reviews_total": 473,
+      "opportunity_score": 9.8,
+      "top_cuisines": [
+        [
+          "Turks restaurant",
+          2
+        ],
+        [
+          "Cafetaria",
+          2
+        ],
+        [
+          "Barbecuerestaurant",
+          1
+        ],
+        [
+          "Broodjeswinkel",
+          1
+        ],
+        [
+          "Bakkerij",
+          1
+        ]
+      ]
+    },
+    "7554": {
+      "pc4": "7554",
+      "name": "Enschede District 7554",
+      "count": 4,
+      "avg_rating": 4.45,
+      "reviews_total": 178,
+      "opportunity_score": 8.0,
+      "top_cuisines": [
+        [
+          "Trouwlocatie",
+          1
+        ],
+        [
+          "Catering",
+          1
+        ],
+        [
+          "Restaurant",
+          1
+        ],
+        [
+          "Snackbar",
+          1
+        ]
+      ]
+    },
+    "7555": {
+      "pc4": "7555",
+      "name": "Enschede District 7555",
+      "count": 4,
+      "avg_rating": 4.58,
+      "reviews_total": 183,
+      "opportunity_score": 8.1,
+      "top_cuisines": [
+        [
+          "Turks restaurant",
+          1
+        ],
+        [
+          "Restaurant",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ],
+        [
+          "Catering",
+          1
+        ]
+      ]
+    },
+    "7556": {
+      "pc4": "7556",
+      "name": "Enschede District 7556",
+      "count": 5,
+      "avg_rating": 4.06,
+      "reviews_total": 203,
+      "opportunity_score": 8.3,
+      "top_cuisines": [
+        [
+          "Sushi takeaway",
+          1
+        ],
+        [
+          "Turks restaurant",
+          1
+        ],
+        [
+          "Bakkerij",
+          1
+        ],
+        [
+          "IJssalon",
+          1
+        ],
+        [
+          "Cafetaria",
+          1
+        ]
+      ]
+    },
+    "7557": {
+      "pc4": "7557",
+      "name": "Enschede District 7557",
+      "count": 5,
+      "avg_rating": 4.5,
+      "reviews_total": 225,
+      "opportunity_score": 8.2,
+      "top_cuisines": [
+        [
+          "Cafetaria",
+          2
+        ],
+        [
+          "Bengaals restaurant",
+          1
+        ],
+        [
+          "Chinees restaurant",
+          1
+        ],
+        [
+          "Verhuurbedrijf voor feestapparatuur",
+          1
+        ]
+      ]
+    },
+    "7558": {
+      "pc4": "7558",
+      "name": "Enschede District 7558",
+      "count": 3,
+      "avg_rating": 4.17,
+      "reviews_total": 125,
+      "opportunity_score": 6.8,
+      "top_cuisines": [
+        [
+          "Aziatisch restaurant",
+          2
+        ],
+        [
+          "Sushirestaurant",
+          1
+        ]
+      ]
+    },
+    "7581": {
+      "pc4": "7581",
+      "name": "Enschede District 7581",
+      "count": 1,
+      "avg_rating": 4.6,
+      "reviews_total": 46,
+      "opportunity_score": 6.0,
+      "top_cuisines": [
+        [
+          "Bakkerij",
+          1
+        ]
+      ]
+    },
+    "7582": {
+      "pc4": "7582",
+      "name": "Enschede District 7582",
+      "count": 1,
+      "avg_rating": 4.9,
+      "reviews_total": 49,
+      "opportunity_score": 6.1,
+      "top_cuisines": [
+        [
+          "Catering",
+          1
+        ]
+      ]
+    },
+    "7586": {
+      "pc4": "7586",
+      "name": "Enschede District 7586",
+      "count": 1,
+      "avg_rating": 4.3,
+      "reviews_total": 43,
+      "opportunity_score": 5.8,
+      "top_cuisines": [
+        [
+          "Chinees restaurant",
+          1
+        ]
+      ]
+    },
+    "7587": {
+      "pc4": "7587",
+      "name": "Enschede District 7587",
+      "count": 1,
+      "avg_rating": 4.6,
+      "reviews_total": 46,
+      "opportunity_score": 6.0,
+      "top_cuisines": [
+        [
+          "Restaurant",
+          1
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+starlette
+playwright==1.49.1
+playwright-stealth
+google-genai
+openai
+httpx
+beautifulsoup4
+python-dotenv
+supabase
+pydantic-settings

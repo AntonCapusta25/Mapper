@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam Restaurants - Google Maps Scraper</title>
+    <meta name="description"
+        content="Discover the best restaurants in Amsterdam with ratings, reviews, and detailed information scraped from Google Maps.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="/static/styles.css?v=5">
+    <link rel="stylesheet" href="/static/district_styles.css?v=2">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🍽️</span>
+                <h1>Amsterdam Restaurants</h1>
+            </div>
+
+            <div class="stats-bar" id="statsBar">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalRestaurants">0</div>
+                    <div class="stat-label">Restaurants</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="avgRating">0</div>
+                    <div class="stat-label">Avg Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="totalReviews">0</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Controls -->
+        <!-- Tabs -->
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="map-view">🗺️ Map & Listings</button>
+            <button class="tab-btn" data-tab="analytics-view">📈 Market Analytics</button>
+            <button class="tab-btn" data-tab="farms-view">🌾 Farms</button>
+        </div>
+
+        <!-- Map View -->
+        <div id="map-view" class="view-section active">
+            <!-- Controls -->
+            <section class="controls">
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label for="searchInput">🔍 Search</label>
+                        <input type="text" id="searchInput" placeholder="Search by name, address, or cuisine...">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="cuisineFilter">🍴 Cuisine Type</label>
+                        <select id="cuisineFilter">
+                            <option value="">All Cuisines</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="minRating">⭐ Minimum Rating</label>
+                        <select id="minRating">
+                            <option value="">Any Rating</option>
+                            <option value="4.5">4.5+ Stars</option>
+                            <option value="4.0">4.0+ Stars</option>
+                            <option value="3.5">3.5+ Stars</option>
+                            <option value="3.0">3.0+ Stars</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="sortBy">📊 Sort By</label>
+                        <select id="sortBy">
+                            <option value="rating">Highest Rating</option>
+                            <option value="reviews">Most Reviews</option>
+                            <option value="name">Name (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-primary" id="applyFilters">
+                        ✨ Apply Filters
+                    </button>
+                    <button class="btn btn-secondary" id="resetFilters">
+                        🔄 Reset
+                    </button>
+                </div>
+            </section>
+
+            <section class="map-section">
+                <div id="map" style="height: 800px !important;"></div>
+            </section>
+
+            <section class="filters-section">
+                <div class="header-controls">
+                    <button id="reloadData" class="btn btn-secondary">
+                        🔄 Reload Data
+                    </button>
+                    <button id="exportData" class="btn btn-primary">
+                        📥 Export CSV
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Info -->
+            <div class="results-info">
+                <div class="results-count">
+                    Showing <span id="resultsCount">0</span> restaurants
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading" id="loadingState" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading restaurants...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">🍽️</div>
+                <h2>No restaurants found</h2>
+                <p>Try adjusting your filters or search criteria</p>
+            </div>
+
+            <!-- Restaurants Grid -->
+            <div class="restaurants-grid" id="restaurantsGrid"></div>
+        </div>
+
+        <!-- Analytics View -->
+        <div id="analytics-view" class="view-section" style="display: none;">
+            <div class="analytics-header">
+                <h2>Market Intelligence Dashboard</h2>
+                <p>Deep dive into Amsterdam's restaurant landscape</p>
+
+                <!-- View Toggle -->
+                <div class="analytics-view-toggle">
+                    <button class="view-toggle-btn active" data-view="city">🏙️ City Summary</button>
+                    <button class="view-toggle-btn" data-view="district">📍 District Analysis</button>
+                </div>
+            </div>
+
+            <!-- City Summary View -->
+            <div id="citySummaryView" class="analytics-content-view">
+                <div class="city-summary-grid">
+                    <!-- Strategic Recommendations -->
+                    <div class="analytics-card full-width strategic-card">
+                        <h3>🎯 Strategic Recommendations</h3>
+                        <div id="strategicRecommendations" class="strategic-content">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                                <p>Loading recommendations...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Opportunities -->
+                    <div class="analytics-card">
+                        <h3>🚀 Top 10 Opportunity Districts</h3>
+                        <div id="topOpportunities" class="opportunities-list">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Underserved Cuisines -->
+                    <div class="analytics-card">
+                        <h3>🍽️ Top Underserved Cuisines</h3>
+                        <div id="underservedCuisines" class="cuisines-list">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Investment Priorities -->
+                    <div class="analytics-card full-width">
+                        <h3>💰 Investment Priority Rankings</h3>
+                        <div id="investmentPriorities" class="investment-table-container">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quality vs Saturation Matrix -->
+                    <div class="analytics-card full-width">
+                        <h3>📊 Quality vs Saturation Analysis</h3>
+                        <div id="qualitySaturationMatrix" class="matrix-grid">
+                            <div class="loading">
+                                <div class="spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- District Analysis View -->
+            <div id="districtAnalysisView" class="analytics-content-view" style="display: none;">
+                <!-- District Selector -->
+                <div class="district-selector">
+                    <label for="districtSelect">📍Choose a District for Detailed Analysis:</label>
+                    <select id="districtSelect">
+                        <option value="">-- Select District --</option>
+                    </select>
+                </div>
+                <div class="spinner"></div>
+                <p>Generating insights...</p>
+            </div>
+        </div>
+        <button id="regenerateInsights" class="btn btn-secondary" style="margin-top: 1rem;">
+            🔄 Regenerate Analysis
+        </button>
+        </div>
+
+        <!-- City-wide Analytics (legacy - now in city summary) -->
+        <div id="citywideAnalytics" class="analytics-grid" style="display: none;">
+            <!-- Key Metrics -->
+            <div class="analytics-card full-width">
+                <h3>📊 Market Overview</h3>
+                <div class="metrics-row" id="analyticsMetrics">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Charts Row 1 -->
+            <div class="analytics-card">
+                <h3>🏆 Top Cuisines by Rating</h3>
+                <canvas id="cuisineRatingChart"></canvas>
+            </div>
+            <div class="analytics-card">
+                <h3>👥 Most Reviewed Cuisines</h3>
+                <canvas id="cuisineReviewChart"></canvas>
+            </div>
+
+            <!-- Market Gaps -->
+            <div class="analytics-card full-width">
+                <h3>🎯 Market Opportunities (Gaps)</h3>
+                <div class="gaps-container" id="marketGaps">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Saturation -->
+            <div class="analytics-card full-width">
+                <h3>🏙️ District Saturation</h3>
+                <div class="saturation-table-container">
+                    <table class="analytics-table" id="saturationTable">
+                        <thead>
+                            <tr>
+                                <th>District (PC4)</th>
+                                <th>Restaurants</th>
+                                <th>Saturation Level</th>
+                                <th>Competition Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Farms View -->
+        <div id="farms-view" class="view-section" style="display: none;">
+            <!-- Controls -->
+            <section class="controls">
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label for="farmsSearchInput">🔍 Search</label>
+                        <input type="text" id="farmsSearchInput" placeholder="Search farms...">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="farmTypeFilter">🌾 Farm Type</label>
+                        <select id="farmTypeFilter">
+                            <option value="">All Types</option>
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="farmsMinRating">⭐ Minimum Rating</label>
+                        <select id="farmsMinRating">
+                            <option value="0">All Ratings</option>
+                            <option value="3">3+ Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="4.5">4.5+ Stars</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="farmsSortBy">📊 Sort By</label>
+                        <select id="farmsSortBy">
+                            <option value="rating">Highest Rated</option>
+                            <option value="reviews">Most Reviews</option>
+                            <option value="name">Name (A-Z)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="applyFarmsFilters" class="btn btn-primary">Apply Filters</button>
+                        <button id="resetFarmsFilters" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map-section">
+                <div id="farmsMap" style="height: 800px !important;"></div>
+            </section>
+
+            <section class="filters-section">
+                <div class="header-controls">
+                    <button id="reloadFarmsData" class="btn btn-secondary">
+                        🔄 Reload Data
+                    </button>
+                    <button id="exportFarmsData" class="btn btn-primary">
+                        📥 Export CSV
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Info -->
+            <div class="results-info">
+                <div class="results-count">
+                    Showing <span id="farmsResultsCount">0</span> farms
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading" id="farmsLoadingState" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading farms...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="farmsEmptyState" style="display: none;">
+                <div class="empty-icon">🌾</div>
+                <h2>No farms found</h2>
+                <p>Try adjusting your filters or search criteria</p>
+            </div>
+
+            <!-- Farms Grid -->
+            <div class="restaurants-grid" id="farmsGrid"></div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="/static/app.js?v=12"></script>
+</body>
+
+</html>

@@ -1,0 +1,1941 @@
+{
+  "1017": {
+    "total_restaurants": 356,
+    "avg_rating": 4.36,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Cannabis store"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 57,
+      "Italian restaurant": 28,
+      "Cannabis store": 17
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📊 Underserved: Turkish restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📊 Underserved: Turkish restaurant"
+  },
+  "1012": {
+    "total_restaurants": 558,
+    "avg_rating": 4.29,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Bar",
+      "Italian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 105,
+      "Bar": 39,
+      "Italian restaurant": 26
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📊 Underserved: Pizza restaurant, Turkish restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📊 Underserved: Pizza restaurant, Turkish restaurant"
+  },
+  "1015": {
+    "total_restaurants": 127,
+    "avg_rating": 4.54,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Bakery"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 26,
+      "Italian restaurant": 11,
+      "Bakery": 7
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Hamburger restaurant",
+      "Turkish restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Hamburger restaurant, Turkish restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Hamburger restaurant, Turkish restaurant"
+  },
+  "1016": {
+    "total_restaurants": 144,
+    "avg_rating": 4.43,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Cafe",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 27,
+      "Cafe": 8,
+      "Pizza restaurant": 5
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial"
+  },
+  "1013": {
+    "total_restaurants": 108,
+    "avg_rating": 4.55,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Cannabis store",
+      "Coffee shop"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 26,
+      "Cannabis store": 8,
+      "Coffee shop": 5
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Hamburger restaurant",
+      "📊 Underserved: Italian restaurant, Bar"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Hamburger restaurant • 📊 Underserved: Italian restaurant, Bar"
+  },
+  "1011": {
+    "total_restaurants": 101,
+    "avg_rating": 4.41,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Pub"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 22,
+      "Italian restaurant": 7,
+      "Pub": 6
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Turkish restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Turkish restaurant",
+      "📊 Underserved: Bakery"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Turkish restaurant • 📊 Underserved: Bakery"
+  },
+  "1018": {
+    "total_restaurants": 88,
+    "avg_rating": 4.46,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Bakery"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 27,
+      "Italian restaurant": 3,
+      "Bakery": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bar",
+      "Indian restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Bar, Indian restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Bar, Indian restaurant"
+  },
+  "1071": {
+    "total_restaurants": 99,
+    "avg_rating": 4.29,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 28,
+      "Italian restaurant": 6,
+      "Pizza restaurant": 4
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bar",
+      "Indian restaurant",
+      "Turkish restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Bar, Indian restaurant",
+      "📊 Underserved: Cannabis store"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Bar, Indian restaurant • 📊 Underserved: Cannabis store"
+  },
+  "1074": {
+    "total_restaurants": 43,
+    "avg_rating": 4.47,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Cannabis store"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 10,
+      "Italian restaurant": 4,
+      "Cannabis store": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Bakery",
+      "Bar"
+    ],
+    "insights": [
+      "🍽️ Missing: Pizza restaurant, Bakery"
+    ],
+    "recommendation": "🍽️ Missing: Pizza restaurant, Bakery"
+  },
+  "1054": {
+    "total_restaurants": 100,
+    "avg_rating": 4.49,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Bar"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 15,
+      "Italian restaurant": 8,
+      "Bar": 7
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Cannabis store, Hamburger restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Cannabis store, Hamburger restaurant"
+  },
+  "1051": {
+    "total_restaurants": 51,
+    "avg_rating": 4.52,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 8,
+      "Italian restaurant": 4,
+      "Pizza restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bar",
+      "Turkish restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Bar, Turkish restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Bar, Turkish restaurant"
+  },
+  "1073": {
+    "total_restaurants": 86,
+    "avg_rating": 4.5,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Bakery",
+      "French restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 16,
+      "Bakery": 7,
+      "French restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Hamburger restaurant",
+      "Turkish restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Hamburger restaurant, Turkish restaurant",
+      "📊 Underserved: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Hamburger restaurant, Turkish restaurant • 📊 Underserved: Italian restaurant, Pizza restaurant"
+  },
+  "1091": {
+    "total_restaurants": 70,
+    "avg_rating": 4.48,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Lunch restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 25,
+      "Italian restaurant": 2,
+      "Lunch restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial"
+  },
+  "1056": {
+    "total_restaurants": 43,
+    "avg_rating": 4.43,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Turkish restaurant",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 10,
+      "Turkish restaurant": 4,
+      "Pizza restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant"
+    ],
+    "insights": [
+      "🍽️ Missing: Italian restaurant"
+    ],
+    "recommendation": "🍽️ Missing: Italian restaurant"
+  },
+  "1014": {
+    "total_restaurants": 34,
+    "avg_rating": 4.26,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Coffee shop",
+      "North African restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 15,
+      "Coffee shop": 2,
+      "North African restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "🍽️ Missing: Italian restaurant, Cannabis store"
+  },
+  "1055": {
+    "total_restaurants": 72,
+    "avg_rating": 4.37,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Bakery",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 17,
+      "Bakery": 7,
+      "Pizza restaurant": 5
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bar"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Italian restaurant, Cannabis store"
+  },
+  "1053": {
+    "total_restaurants": 149,
+    "avg_rating": 4.4,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Indian restaurant",
+      "Cafe"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 25,
+      "Indian restaurant": 6,
+      "Cafe": 6
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📊 Underserved: Cannabis store"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📊 Underserved: Cannabis store"
+  },
+  "1057": {
+    "total_restaurants": 67,
+    "avg_rating": 4.42,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Pizza restaurant",
+      "Turkish restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 18,
+      "Pizza restaurant": 5,
+      "Turkish restaurant": 4
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Hamburger restaurant",
+      "Coffee shop"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Hamburger restaurant, Coffee shop"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Hamburger restaurant, Coffee shop"
+  },
+  "1052": {
+    "total_restaurants": 51,
+    "avg_rating": 4.53,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Persian restaurant",
+      "Indonesian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 9,
+      "Persian restaurant": 4,
+      "Indonesian restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Indian restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Cannabis store, Indian restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Cannabis store, Indian restaurant"
+  },
+  "1058": {
+    "total_restaurants": 27,
+    "avg_rating": 4.37,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Indian restaurant",
+      "Cannabis store"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 4,
+      "Indian restaurant": 3,
+      "Cannabis store": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bakery",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🍽️ Missing: Bakery, Hamburger restaurant"
+    ],
+    "recommendation": "🍽️ Missing: Bakery, Hamburger restaurant"
+  },
+  "1065": {
+    "total_restaurants": 19,
+    "avg_rating": 4.3,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Moroccan restaurant",
+      "Pizza restaurant",
+      "Restaurant"
+    ],
+    "cuisine_counts": {
+      "Moroccan restaurant": 3,
+      "Pizza restaurant": 3,
+      "Restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bar",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Cannabis store, Bar",
+      "📊 Underserved: Restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Cannabis store, Bar • 📊 Underserved: Restaurant"
+  },
+  "1043": {
+    "total_restaurants": 39,
+    "avg_rating": 4.21,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Brasserie",
+      "Bar"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 9,
+      "Brasserie": 2,
+      "Bar": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Bakery",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🍽️ Missing: Pizza restaurant, Bakery"
+    ],
+    "recommendation": "🍽️ Missing: Pizza restaurant, Bakery"
+  },
+  "1062": {
+    "total_restaurants": 15,
+    "avg_rating": 4.32,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Pizza delivery",
+      "Lunch restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 6,
+      "Pizza delivery": 2,
+      "Lunch restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1061": {
+    "total_restaurants": 14,
+    "avg_rating": 4.37,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Turkish restaurant",
+      "Cafe",
+      "Japanese restaurant"
+    ],
+    "cuisine_counts": {
+      "Turkish restaurant": 2,
+      "Cafe": 2,
+      "Japanese restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Restaurant, Italian restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Restaurant, Italian restaurant"
+  },
+  "1068": {
+    "total_restaurants": 36,
+    "avg_rating": 4.23,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Turkish restaurant",
+      "Mediterranean restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 14,
+      "Turkish restaurant": 3,
+      "Mediterranean restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bakery",
+      "Bar",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🍽️ Missing: Bakery, Bar"
+    ],
+    "recommendation": "🍽️ Missing: Bakery, Bar"
+  },
+  "1092": {
+    "total_restaurants": 19,
+    "avg_rating": 4.33,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Indian restaurant",
+      "Ice cream shop"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 9,
+      "Indian restaurant": 2,
+      "Ice cream shop": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Cannabis store"
+  },
+  "1093": {
+    "total_restaurants": 52,
+    "avg_rating": 4.37,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Takeout Restaurant",
+      "Pub"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 15,
+      "Takeout Restaurant": 3,
+      "Pub": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Indian restaurant",
+      "Coffee shop"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Italian restaurant, Indian restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Italian restaurant, Indian restaurant"
+  },
+  "1019": {
+    "total_restaurants": 53,
+    "avg_rating": 4.38,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Event venue",
+      "Brewery"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 20,
+      "Event venue": 2,
+      "Brewery": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bakery",
+      "Bar"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Cannabis store, Bakery",
+      "📊 Underserved: Italian restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Cannabis store, Bakery • 📊 Underserved: Italian restaurant"
+  },
+  "1095": {
+    "total_restaurants": 24,
+    "avg_rating": 4.49,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Fast food restaurant",
+      "Chinese restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 10,
+      "Fast food restaurant": 2,
+      "Chinese restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Bakery"
+    ],
+    "insights": [
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1097": {
+    "total_restaurants": 17,
+    "avg_rating": 4.19,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Fine dining restaurant",
+      "Brasserie"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 10,
+      "Fine dining restaurant": 1,
+      "Brasserie": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1096": {
+    "total_restaurants": 12,
+    "avg_rating": 4.24,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Diner",
+      "Italian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 4,
+      "Diner": 1,
+      "Italian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1094": {
+    "total_restaurants": 57,
+    "avg_rating": 4.41,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Pizza restaurant",
+      "Turkish restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 17,
+      "Pizza restaurant": 4,
+      "Turkish restaurant": 4
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bar"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Italian restaurant, Cannabis store"
+  },
+  "1098": {
+    "total_restaurants": 20,
+    "avg_rating": 4.47,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Pizza restaurant",
+      "Peruvian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 6,
+      "Pizza restaurant": 2,
+      "Peruvian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bakery",
+      "Bar"
+    ],
+    "insights": [
+      "🍽️ Missing: Cannabis store, Bakery"
+    ],
+    "recommendation": "🍽️ Missing: Cannabis store, Bakery"
+  },
+  "1082": {
+    "total_restaurants": 68,
+    "avg_rating": 4.18,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Japanese restaurant",
+      "Chinese restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 18,
+      "Japanese restaurant": 3,
+      "Chinese restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bakery",
+      "Indian restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📈 Quality gap - opportunity for excellence (avg 4.2★)",
+      "🍽️ Missing: Cannabis store, Bakery"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📈 Quality gap - opportunity for excellence (avg 4.2★) • 🍽️ Missing: Cannabis store, Bakery"
+  },
+  "1072": {
+    "total_restaurants": 173,
+    "avg_rating": 4.47,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Pizza restaurant",
+      "Japanese restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 49,
+      "Pizza restaurant": 11,
+      "Japanese restaurant": 6
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📊 Underserved: Italian restaurant, Bar"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📊 Underserved: Italian restaurant, Bar"
+  },
+  "1076": {
+    "total_restaurants": 26,
+    "avg_rating": 4.42,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Indian restaurant",
+      "Italian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 9,
+      "Indian restaurant": 3,
+      "Italian restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bar",
+      "Turkish restaurant",
+      "Coffee shop"
+    ],
+    "insights": [
+      "🍽️ Missing: Bar, Turkish restaurant"
+    ],
+    "recommendation": "🍽️ Missing: Bar, Turkish restaurant"
+  },
+  "1075": {
+    "total_restaurants": 56,
+    "avg_rating": 4.48,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Indonesian restaurant",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 11,
+      "Indonesian restaurant": 3,
+      "Pizza restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bar"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Cannabis store, Bar"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Cannabis store, Bar"
+  },
+  "1077": {
+    "total_restaurants": 23,
+    "avg_rating": 4.26,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Indonesian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 7,
+      "Italian restaurant": 3,
+      "Indonesian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bar"
+    ],
+    "insights": [
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1078": {
+    "total_restaurants": 57,
+    "avg_rating": 4.46,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Japanese restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 8,
+      "Italian restaurant": 3,
+      "Japanese restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bar",
+      "Hamburger restaurant",
+      "Turkish restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "🍽️ Missing: Bar, Hamburger restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 🍽️ Missing: Bar, Hamburger restaurant"
+  },
+  "1079": {
+    "total_restaurants": 21,
+    "avg_rating": 4.5,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Sushi restaurant",
+      "Indian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 4,
+      "Sushi restaurant": 2,
+      "Indian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1059": {
+    "total_restaurants": 14,
+    "avg_rating": 4.46,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Indonesian restaurant",
+      "Takeout Restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 5,
+      "Indonesian restaurant": 2,
+      "Takeout Restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1081": {
+    "total_restaurants": 21,
+    "avg_rating": 4.04,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Bar",
+      "Modern European restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 10,
+      "Bar": 1,
+      "Modern European restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "📈 Quality gap - opportunity for excellence (avg 4.0★)",
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "📈 Quality gap - opportunity for excellence (avg 4.0★) • 🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1083": {
+    "total_restaurants": 27,
+    "avg_rating": 4.35,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Korean restaurant",
+      "Pizza restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 7,
+      "Korean restaurant": 3,
+      "Pizza restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bakery",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🍽️ Missing: Cannabis store, Bakery"
+    ],
+    "recommendation": "🍽️ Missing: Cannabis store, Bakery"
+  },
+  "1031": {
+    "total_restaurants": 46,
+    "avg_rating": 4.47,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Bar",
+      "Hamburger restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 14,
+      "Bar": 3,
+      "Hamburger restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1033": {
+    "total_restaurants": 22,
+    "avg_rating": 4.44,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Italian restaurant",
+      "Mexican restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 14,
+      "Italian restaurant": 2,
+      "Mexican restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bakery",
+      "Bar",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🍽️ Missing: Bakery, Bar"
+    ],
+    "recommendation": "🍽️ Missing: Bakery, Bar"
+  },
+  "1021": {
+    "total_restaurants": 33,
+    "avg_rating": 4.5,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Pizza restaurant",
+      "Indian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 12,
+      "Pizza restaurant": 2,
+      "Indian restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Bakery",
+      "Coffee shop"
+    ],
+    "insights": [
+      "🍽️ Missing: Italian restaurant, Bakery"
+    ],
+    "recommendation": "🍽️ Missing: Italian restaurant, Bakery"
+  },
+  "1032": {
+    "total_restaurants": 17,
+    "avg_rating": 4.4,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Turkish restaurant",
+      "Eritrean restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 5,
+      "Turkish restaurant": 2,
+      "Eritrean restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Bakery",
+      "Bar",
+      "Hamburger restaurant"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Bakery, Bar"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Bakery, Bar"
+  },
+  "1023": {
+    "total_restaurants": 8,
+    "avg_rating": 4.53,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Indonesian restaurant",
+      "Asian fusion restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 2,
+      "Indonesian restaurant": 1,
+      "Asian fusion restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1025": {
+    "total_restaurants": 23,
+    "avg_rating": 4.53,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Sushi restaurant",
+      "Vietnamese restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 8,
+      "Sushi restaurant": 2,
+      "Vietnamese restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bar"
+    ],
+    "insights": [
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "🍽️ Missing: Italian restaurant, Cannabis store"
+  },
+  "1034": {
+    "total_restaurants": 5,
+    "avg_rating": 4.5,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Lunch restaurant",
+      "Turkish restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 2,
+      "Lunch restaurant": 1,
+      "Turkish restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1024": {
+    "total_restaurants": 6,
+    "avg_rating": 4.13,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Sushi restaurant",
+      "Cannabis store"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 3,
+      "Sushi restaurant": 1,
+      "Cannabis store": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Bakery"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "📈 Quality gap - opportunity for excellence (avg 4.1★)",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 📈 Quality gap - opportunity for excellence (avg 4.1★) • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1022": {
+    "total_restaurants": 8,
+    "avg_rating": 4.59,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Fast food restaurant",
+      "Italian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 3,
+      "Fast food restaurant": 1,
+      "Italian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "⭐ High-quality area (avg 4.6★)",
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • ⭐ High-quality area (avg 4.6★) • 🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1064": {
+    "total_restaurants": 5,
+    "avg_rating": 4.38,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Greek restaurant",
+      "Restaurant",
+      "Indonesian restaurant"
+    ],
+    "cuisine_counts": {
+      "Greek restaurant": 1,
+      "Restaurant": 1,
+      "Indonesian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1069": {
+    "total_restaurants": 17,
+    "avg_rating": 4.35,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Turkish restaurant",
+      "Moroccan restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 5,
+      "Turkish restaurant": 3,
+      "Moroccan restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1066": {
+    "total_restaurants": 14,
+    "avg_rating": 4.39,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Brewery",
+      "Italian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 4,
+      "Brewery": 2,
+      "Italian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Pizza restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Pizza restaurant, Cannabis store"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Pizza restaurant, Cannabis store"
+  },
+  "1063": {
+    "total_restaurants": 26,
+    "avg_rating": 4.13,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Turkish restaurant",
+      "Restaurant",
+      "Steak house"
+    ],
+    "cuisine_counts": {
+      "Turkish restaurant": 9,
+      "Restaurant": 6,
+      "Steak house": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "📈 Quality gap - opportunity for excellence (avg 4.1★)",
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "📈 Quality gap - opportunity for excellence (avg 4.1★) • 🍽️ Missing: Italian restaurant, Cannabis store"
+  },
+  "1087": {
+    "total_restaurants": 42,
+    "avg_rating": 4.18,
+    "avg_price_level": 0,
+    "saturation": "Medium",
+    "top_cuisines": [
+      "Restaurant",
+      "Turkish restaurant",
+      "Delivery Restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 13,
+      "Turkish restaurant": 2,
+      "Delivery Restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bakery",
+      "Bar"
+    ],
+    "insights": [
+      "🍽️ Missing: Cannabis store, Bakery"
+    ],
+    "recommendation": "🍽️ Missing: Cannabis store, Bakery"
+  },
+  "1181": {
+    "total_restaurants": 5,
+    "avg_rating": 4.5,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "South Indian restaurant",
+      "Indonesian restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 2,
+      "South Indian restaurant": 1,
+      "Indonesian restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1103": {
+    "total_restaurants": 5,
+    "avg_rating": 4.24,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "West African restaurant",
+      "Indian restaurant",
+      "Indian takeaway"
+    ],
+    "cuisine_counts": {
+      "West African restaurant": 2,
+      "Indian restaurant": 1,
+      "Indian takeaway": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1183": {
+    "total_restaurants": 9,
+    "avg_rating": 4.53,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Indonesian restaurant",
+      "Kosher restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 2,
+      "Indonesian restaurant": 2,
+      "Kosher restaurant": 2
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1182": {
+    "total_restaurants": 8,
+    "avg_rating": 4.46,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Indonesian restaurant",
+      "Indian restaurant",
+      "Restaurant"
+    ],
+    "cuisine_counts": {
+      "Indonesian restaurant": 2,
+      "Indian restaurant": 1,
+      "Restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1101": {
+    "total_restaurants": 52,
+    "avg_rating": 3.99,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Fast food restaurant",
+      "Sandwich shop"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 15,
+      "Fast food restaurant": 3,
+      "Sandwich shop": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Cannabis store",
+      "Bar",
+      "Indian restaurant"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📈 Quality gap - opportunity for excellence (avg 4.0★)",
+      "🍽️ Missing: Cannabis store, Bar",
+      "📊 Underserved: Italian restaurant"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📈 Quality gap - opportunity for excellence (avg 4.0★) • 🍽️ Missing: Cannabis store, Bar • 📊 Underserved: Italian restaurant"
+  },
+  "1046": {
+    "total_restaurants": 8,
+    "avg_rating": 4.16,
+    "avg_price_level": 0,
+    "saturation": "Low",
+    "top_cuisines": [
+      "Restaurant",
+      "Turkish restaurant",
+      "Fast food restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 5,
+      "Turkish restaurant": 1,
+      "Fast food restaurant": 1
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Pizza restaurant",
+      "Cannabis store"
+    ],
+    "insights": [
+      "🎯 Low competition - great market entry opportunity",
+      "📈 Quality gap - opportunity for excellence (avg 4.2★)",
+      "🍽️ Missing: Italian restaurant, Pizza restaurant"
+    ],
+    "recommendation": "🎯 Low competition - great market entry opportunity • 📈 Quality gap - opportunity for excellence (avg 4.2★) • 🍽️ Missing: Italian restaurant, Pizza restaurant"
+  },
+  "1102": {
+    "total_restaurants": 52,
+    "avg_rating": 3.96,
+    "avg_price_level": 0,
+    "saturation": "High",
+    "top_cuisines": [
+      "Restaurant",
+      "Fast food restaurant",
+      "Mexican restaurant"
+    ],
+    "cuisine_counts": {
+      "Restaurant": 14,
+      "Fast food restaurant": 4,
+      "Mexican restaurant": 3
+    },
+    "price_distribution": {
+      "budget": 0,
+      "mid_range": 0,
+      "upscale": 0
+    },
+    "missing_cuisines": [
+      "Italian restaurant",
+      "Cannabis store",
+      "Bakery"
+    ],
+    "insights": [
+      "⚠️ Saturated market - differentiation crucial",
+      "📈 Quality gap - opportunity for excellence (avg 4.0★)",
+      "🍽️ Missing: Italian restaurant, Cannabis store"
+    ],
+    "recommendation": "⚠️ Saturated market - differentiation crucial • 📈 Quality gap - opportunity for excellence (avg 4.0★) • 🍽️ Missing: Italian restaurant, Cannabis store"
+  }
+}

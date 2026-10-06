@@ -1,0 +1,5 @@
+**/*.js
+!Code.gs
+package.json
+README.md
+node_modules/**

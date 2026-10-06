@@ -1,0 +1,57 @@
+======================================================================
+ENSCHEDE RESTAURANT MARKET - CITY-WIDE MAP & DISTRICT ANALYSIS
+======================================================================
+
+Total Districts Analyzed: 34
+Total Restaurants & Eateries Mapped: 834
+Analysis Date: 2026-10-06 17:26:57
+
+TOP HIGHEST-POTENTIAL ENSCHEDE DISTRICTS
+----------------------------------------------------------------------
+1. District 7511 (Enschede Binnenstad / Oude Markt): Potential 10.0/10.0 (334 restaurants, 4.45 avg rating, 14,203 reviews)
+2. District 7512 (Enschede Centrum-Oost / De Heurne / Bothoven): Potential 10.0/10.0 (34 restaurants, 4.26 avg rating, 1,407 reviews)
+3. District 7514 (Enschede Boddenkamp / Walhof): Potential 10.0/10.0 (24 restaurants, 4.4 avg rating, 1,011 reviews)
+4. District 7521 (Enschede Twekkelerveld / Tubantia): Potential 10.0/10.0 (52 restaurants, 4.25 avg rating, 2,042 reviews)
+5. District 7523 (Enschede Roombeek / Mekkelholt / Deppenbroek): Potential 10.0/10.0 (28 restaurants, 4.31 avg rating, 1,207 reviews)
+6. District 7524 (Enschede De Eschmarke Noord): Potential 10.0/10.0 (17 restaurants, 4.4 avg rating, 1,262 reviews)
+7. District 7533 (Enschede Dolphia / De Eschmarke): Potential 10.0/10.0 (17 restaurants, 4.27 avg rating, 683 reviews)
+8. District 7534 (Enschede Glanerbrug Centrum): Potential 10.0/10.0 (28 restaurants, 4.44 avg rating, 1,199 reviews)
+9. District 7545 (Enschede Stadsveld / Pathmos): Potential 10.0/10.0 (42 restaurants, 4.42 avg rating, 1,637 reviews)
+10. District 7547 (Enschede Usselo): Potential 10.0/10.0 (22 restaurants, 4.54 avg rating, 922 reviews)
+
+FULL ENSCHEDE DISTRICT BREAKDOWN
+----------------------------------------------------------------------
+• PC 7511 - Enschede Binnenstad / Oude Markt: 334 venues | Avg Rating: 4.45 | Reviews: 14,203 | Opp Score: 10.0/10.0
+• PC 7512 - Enschede Centrum-Oost / De Heurne / Bothoven: 34 venues | Avg Rating: 4.26 | Reviews: 1,407 | Opp Score: 10.0/10.0
+• PC 7514 - Enschede Boddenkamp / Walhof: 24 venues | Avg Rating: 4.4 | Reviews: 1,011 | Opp Score: 10.0/10.0
+• PC 7521 - Enschede Twekkelerveld / Tubantia: 52 venues | Avg Rating: 4.25 | Reviews: 2,042 | Opp Score: 10.0/10.0
+• PC 7523 - Enschede Roombeek / Mekkelholt / Deppenbroek: 28 venues | Avg Rating: 4.31 | Reviews: 1,207 | Opp Score: 10.0/10.0
+• PC 7524 - Enschede De Eschmarke Noord: 17 venues | Avg Rating: 4.4 | Reviews: 1,262 | Opp Score: 10.0/10.0
+• PC 7533 - Enschede Dolphia / De Eschmarke: 17 venues | Avg Rating: 4.27 | Reviews: 683 | Opp Score: 10.0/10.0
+• PC 7534 - Enschede Glanerbrug Centrum: 28 venues | Avg Rating: 4.44 | Reviews: 1,199 | Opp Score: 10.0/10.0
+• PC 7545 - Enschede Stadsveld / Pathmos: 42 venues | Avg Rating: 4.42 | Reviews: 1,637 | Opp Score: 10.0/10.0
+• PC 7547 - Enschede Usselo: 22 venues | Avg Rating: 4.54 | Reviews: 922 | Opp Score: 10.0/10.0
+• PC 7548 - Enschede Boekelo: 12 venues | Avg Rating: 4.63 | Reviews: 509 | Opp Score: 10.0/10.0
+• PC 7551 - Enschede District 7551: 39 venues | Avg Rating: 4.39 | Reviews: 1,667 | Opp Score: 10.0/10.0
+• PC 7531 - Enschede Ribbelt / Stokhorst: 15 venues | Avg Rating: 4.44 | Reviews: 621 | Opp Score: 9.9/10.0
+• PC 7553 - Enschede District 7553: 12 venues | Avg Rating: 4.3 | Reviews: 473 | Opp Score: 9.8/10.0
+• PC 7513 - Enschede Horstlanden / Veldkamp / Getfert: 17 venues | Avg Rating: 4.49 | Reviews: 764 | Opp Score: 9.7/10.0
+• PC 7544 - Enschede Helmerhoek: 27 venues | Avg Rating: 4.42 | Reviews: 1,106 | Opp Score: 9.6/10.0
+• PC 7542 - Enschede Wesselerbrink Noord: 7 venues | Avg Rating: 4.44 | Reviews: 311 | Opp Score: 9.5/10.0
+• PC 7543 - Enschede Wesselerbrink Zuid: 20 venues | Avg Rating: 4.35 | Reviews: 696 | Opp Score: 9.4/10.0
+• PC 7546 - Enschede Boswinkel / Ruwenbos: 8 venues | Avg Rating: 4.17 | Reviews: 292 | Opp Score: 9.4/10.0
+• PC 7541 - Enschede Hogeland: 11 venues | Avg Rating: 4.32 | Reviews: 389 | Opp Score: 9.3/10.0
+• PC 7522 - Enschede Kennispark / UT / Bolhaar: 25 venues | Avg Rating: 4.45 | Reviews: 947 | Opp Score: 9.2/10.0
+• PC 7532 - Enschede Eilermark / Glanerbrug Noord: 5 venues | Avg Rating: 4.72 | Reviews: 236 | Opp Score: 8.7/10.0
+• PC 7552 - Enschede District 7552: 5 venues | Avg Rating: 4.08 | Reviews: 204 | Opp Score: 8.3/10.0
+• PC 7556 - Enschede District 7556: 5 venues | Avg Rating: 4.06 | Reviews: 203 | Opp Score: 8.3/10.0
+• PC 7557 - Enschede District 7557: 5 venues | Avg Rating: 4.5 | Reviews: 225 | Opp Score: 8.2/10.0
+• PC 7555 - Enschede District 7555: 4 venues | Avg Rating: 4.58 | Reviews: 183 | Opp Score: 8.1/10.0
+• PC 7554 - Enschede District 7554: 4 venues | Avg Rating: 4.45 | Reviews: 178 | Opp Score: 8.0/10.0
+• PC 7535 - Enschede Lonneker: 4 venues | Avg Rating: 4.38 | Reviews: 175 | Opp Score: 7.9/10.0
+• PC 7525 - Enschede District 7525: 4 venues | Avg Rating: 4.3 | Reviews: 172 | Opp Score: 7.1/10.0
+• PC 7558 - Enschede District 7558: 3 venues | Avg Rating: 4.17 | Reviews: 125 | Opp Score: 6.8/10.0
+• PC 7582 - Enschede District 7582: 1 venues | Avg Rating: 4.9 | Reviews: 49 | Opp Score: 6.1/10.0
+• PC 7581 - Enschede District 7581: 1 venues | Avg Rating: 4.6 | Reviews: 46 | Opp Score: 6.0/10.0
+• PC 7587 - Enschede District 7587: 1 venues | Avg Rating: 4.6 | Reviews: 46 | Opp Score: 6.0/10.0
+• PC 7586 - Enschede District 7586: 1 venues | Avg Rating: 4.3 | Reviews: 43 | Opp Score: 5.8/10.0

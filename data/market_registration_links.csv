@@ -1,0 +1,17 @@
+name,website,form_url,contact_email,notes
+Pure Markt,https://puremarkt.nl,https://puremarkt.nl/aanmelden/,,Found 3 relevant links: inschrijven → https://puremarkt.nl/aanmelden/ | inschrijven → https://puremarkt.nl/aanmelden/ | inschrijven nieuwsbrief → http://eepurl.com/hc-9_D
+Sunday Market,https://sundaymarket.nl,https://sundaymarket.nl/westergas/westergas-deelnemers,,Found 6 relevant links: deelnemers → https://sundaymarket.nl/westergas/westergas-deelnemers | deelnemers → https://sundaymarket.nl/rokin/deelnemers-rokin | deelnemers → https://sundaymarket.nl/de-koepel/deelnemers | meedoen → https://fd8.formdesk.com/sundaymarket/Selectieformulier | selectieformulier → https://fd8.formdesk.com/sundaymarket/Selectieformulier
+Swan Market,https://swanmarket.nl,https://www.swanmarket.nl/deelnemen-swan-market-stores/,,Found 12 relevant links: in onze winkels → https://www.swanmarket.nl/deelnemen-swan-market-stores/ | op onze markten → https://www.theofflinecompany.nl/meedoen/ | via swanmarket.nl → https://www.swanmarket.nl/deelnemen-swan-market-online/ | geboorte → https://www.swanmarket.nl/tag/kraamkado/ | verkopen via swan market.nl → https://www.swanmarket.nl/deelnemen-swan-market-online/
+Museum Market,https://museummarket.nl,https://museummarket.nl/deelnemers,,Found 5 relevant links: deelnemers → https://museummarket.nl/deelnemers | meedoen → https://museummarket.nl/meedoen | meedoen? → http://fd8.formdesk.com/sundaymarket/MuseumMarket_Selection_form |  → https://www.formdesk.com/sundaymarket/MuseumMarket_nieuwsbrief |  → http://fd8.formdesk.com/sundaymarket/MuseumMarket_Selection_form
+The Maker Market,https://themakermarket.nl,https://themakermarket.nl/meer-informatie-rotterdam,hello@themakermarket.nl,Found 11 relevant links: rotterdam → https://themakermarket.nl/meer-informatie-rotterdam | haarlem → https://themakermarket.nl/meer-informatie-haarlem | schrijf je in / meer informatie → https://themakermarket.nl/schrijf-je-in | rotterdam → https://themakermarket.nl/meer-informatie-rotterdam | haarlem → https://themakermarket.nl/meer-informatie-haarlem
+De Hallen Market,https://dehallen-amsterdam.nl,,,No direct form link found on homepage
+Noordermarkt,https://noordermarkt-amsterdam.nl,https://www.noordermarkt-amsterdam.nl/nl/deelnemen,,Found 2 relevant links: deelname → https://www.noordermarkt-amsterdam.nl/nl/deelnemen | deelname → https://www.noordermarkt-amsterdam.nl/nl/deelnemen
+IJ-Hallen,https://ijhallen.nl,https://ijhallen.nl/boeken-stap-1.php?marktid=234,,Found 6 relevant links: boek een kraam → https://ijhallen.nl/boeken-stap-1.php?marktid=234 | boek een kraam → https://ijhallen.nl/boeken-stap-1.php?marktid=235 | boek een kraam → https://ijhallen.nl/boeken-stap-1.php?marktid=236 | boek een kraam → https://ijhallen.nl/boeken-stap-1.php?marktid=233 | zakelijke verhuur hal → https://ijhallen.nl/verhuur.php
+Hartjesmarkt,https://hartjesmarkt.nl,,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://hartjesmarkt.nl/
+Call log:
+  - navigating to ""https://hartjesmarkt.nl/"", waiting until ""domcontentloaded""
+"
+Groene Loper,https://degroeneloper.nl,,,"Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://degroeneloper.nl/
+Call log:
+  - navigating to ""https://degroeneloper.nl/"", waiting until ""domcontentloaded""
+"
